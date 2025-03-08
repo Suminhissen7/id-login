@@ -62,22 +62,23 @@ class Garena {
             'app_server_id' => 0
         ]);
         $headers = [
-            'Accept-Language: id-ID,id;q=0.9',
+            'Accept: application/json, text/plain, */*',
+            'Accept-Encoding: gzip, deflate, br','Accept-Language: en-US,en;q=0.9',
+            'Cache-Control: no-cache',
             'Connection: keep-alive',
             'Content-Length: ' . strlen($postData),
-            'DNT: 1',
+            'Content-Type: application/json',
             'Host: shop.garena.my',
             'Origin: https://shop.garena.my',
-            'Referer: https://shop.garena.my/app',
+            'Pragma: no-cache',
+            'Referer: https://shop.garena.my/?channel=202953',
             'Sec-Fetch-Dest: empty',
             'Sec-Fetch-Mode: cors',
             'Sec-Fetch-Site: same-origin',
             'User-Agent: '.$this->ua,
-            'accept: application/json',
-            'content-type: application/json',
-            'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
-            'sec-ch-ua-mobile: ?0',
-            'sec-ch-ua-platform: "Windows"',
+            'sec-ch-ua: '.$this->sechcha,
+            'sec-ch-ua-mobile: ?1',
+            'sec-ch-ua-platform: "Android"',
             'x-datadome-clientid: ' . $this->cookies['datadome'],
         ];
         $response = $this->fetch($url, $postData, $headers, $this->getCookie());
