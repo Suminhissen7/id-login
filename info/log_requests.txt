@@ -1,0 +1,1620 @@
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;  Trident/5.0)"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:24 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 19:59:24 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=370effd0b7c8f931b82e166cb4bbec54;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "223.204.218.7";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3315",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;  Trident/5.0)"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A18.478%2C%22ifov%22%3Afalse%2C%22hc%22%3A1%2C%22br_oh%22%3A651%2C%22br_ow%22%3A1077%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28compatible%3B+MSIE+9.0%3B+Windows+NT+6.1%3B+Trident%5C%2F5.0%3B++Trident%5C%2F5.0%29%22%2C%22wbd%22%3Atrue%2C%22dp0%22%3Afalse%2C%22tagpu%22%3Anull%2C%22wdif%22%3Afalse%2C%22wdifrm%22%3Afalse%2C%22npmtm%22%3Afalse%2C%22br_h%22%3A1088%2C%22br_w%22%3A702%2C%22isf%22%3Afalse%2C%22nddc%22%3Anull%2C%22rs_h%22%3A633%2C%22rs_w%22%3A911%2C%22rs_cd%22%3Anull%2C%22phe%22%3Atrue%2C%22nm%22%3Atrue%2C%22jsf%22%3Atrue%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A1080%2C%22ars_w%22%3A1136%2C%22tz%22%3A328%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Afalse%2C%22plg%22%3A6%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A22%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Afalse%2C%22awe%22%3Atrue%2C%22geb%22%3Afalse%2C%22dat%22%3Atrue%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Afalse%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Atrue%2C%22acaa%22%3Anull%2C%22acaats%22%3Atrue%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Atrue%2C%22acf%22%3Anull%2C%22acfts%22%3Atrue%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Atrue%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Atrue%2C%22acwm%22%3Anull%2C%22acwmts%22%3Afalse%2C%22ocpt%22%3Atrue%2C%22vco%22%3Anull%2C%22vcots%22%3Afalse%2C%22vch%22%3Anull%2C%22vchts%22%3Atrue%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Atrue%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Atrue%2C%22lgs%22%3Anull%2C%22lgsod%22%3Afalse%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Atrue%2C%22idn%22%3Anull%2C%22capi%22%3Afalse%2C%22svde%22%3Afalse%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Atrue%2C%22spwn%22%3Afalse%2C%22emt%22%3Atrue%2C%22bfr%22%3Afalse%2C%22dbov%22%3Atrue%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724764%7D&eventCounters=%7B%22mousemove%22%3A47%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 19:59:25 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 aca4cfc16ad0f84e78738cc400bfb7f4.cloudfront.net (CloudFront)
+x-amz-cf-pop: ZRH55-P1
+x-amz-cf-id: oVoSpfT_jiRtX0BGHMas7CwRiVZ4nd8OqQMoz0p3MFJ-dpyhTnyZ6g==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=8On7vPenDjVmWv0oqzsr1cKACxD0D0IoTTMzVKNzh4pRBhsnEJCJ70Kmf2LjsaaZlXwAqUr_SxDMsWZiPBScq9N3GW33I1jgH4J3eVQuN5zF3Lo7jVy_tchHKX4v~d6c; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;  Trident/5.0)",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: 8On7vPenDjVmWv0oqzsr1cKACxD0D0IoTTMzVKNzh4pRBhsnEJCJ70Kmf2LjsaaZlXwAqUr_SxDMsWZiPBScq9N3GW33I1jgH4J3eVQuN5zF3Lo7jVy_tchHKX4v~d6c"
+]
+Cookies: source=pc; region=MY; mspid2=370effd0b7c8f931b82e166cb4bbec54; datadome=8On7vPenDjVmWv0oqzsr1cKACxD0D0IoTTMzVKNzh4pRBhsnEJCJ70Kmf2LjsaaZlXwAqUr_SxDMsWZiPBScq9N3GW33I1jgH4J3eVQuN5zF3Lo7jVy_tchHKX4v%7Ed6c
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 19:59:29 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMAof08oqSPI30AKWKoQA==
+X-Dd-B: 1
+X-Set-Cookie: datadome=zGjNcBpj5I954LGxtSrn86VbWDdj1V0P4OsXIwB9h6Vxb6Eqyr2wju9bbn9WOhoiVsgwW6tx1d9mPFGcsdpJOaKLv8C_qY4ufS6vfRyz5KQOoNdqnNBLPqBGE9NlcPXh; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAof08oqSPI30AKWKoQA==&cid=zGjNcBpj5I954LGxtSrn86VbWDdj1V0P4OsXIwB9h6Vxb6Eqyr2wju9bbn9WOhoiVsgwW6tx1d9mPFGcsdpJOaKLv8C_qY4ufS6vfRyz5KQOoNdqnNBLPqBGE9NlcPXh&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=3f8a8bd808cdaaadb1f43a6ead8761ed96b3ec887b04ac1977ce2742e701f8d8"}
+
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:32 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 19:59:32 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=c111e103d7ac402bd77f0459dadace21;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "93.83.98.220";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3316",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A18.883%2C%22ifov%22%3Afalse%2C%22hc%22%3A16%2C%22br_oh%22%3A965%2C%22br_ow%22%3A1156%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A57.0%29+Gecko%5C%2F20100101+Firefox%5C%2F57.0%22%2C%22wbd%22%3Atrue%2C%22dp0%22%3Atrue%2C%22tagpu%22%3Anull%2C%22wdif%22%3Atrue%2C%22wdifrm%22%3Atrue%2C%22npmtm%22%3Atrue%2C%22br_h%22%3A642%2C%22br_w%22%3A607%2C%22isf%22%3Afalse%2C%22nddc%22%3Anull%2C%22rs_h%22%3A806%2C%22rs_w%22%3A1025%2C%22rs_cd%22%3Anull%2C%22phe%22%3Atrue%2C%22nm%22%3Afalse%2C%22jsf%22%3Afalse%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A867%2C%22ars_w%22%3A1138%2C%22tz%22%3A765%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Atrue%2C%22plg%22%3A8%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A66%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Afalse%2C%22awe%22%3Afalse%2C%22geb%22%3Atrue%2C%22dat%22%3Atrue%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Atrue%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Afalse%2C%22acaa%22%3Anull%2C%22acaats%22%3Afalse%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Atrue%2C%22acf%22%3Anull%2C%22acfts%22%3Atrue%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Afalse%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Atrue%2C%22acwm%22%3Anull%2C%22acwmts%22%3Atrue%2C%22ocpt%22%3Afalse%2C%22vco%22%3Anull%2C%22vcots%22%3Afalse%2C%22vch%22%3Anull%2C%22vchts%22%3Afalse%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Atrue%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Afalse%2C%22lgs%22%3Anull%2C%22lgsod%22%3Atrue%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Afalse%2C%22idn%22%3Anull%2C%22capi%22%3Atrue%2C%22svde%22%3Afalse%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Afalse%2C%22spwn%22%3Atrue%2C%22emt%22%3Atrue%2C%22bfr%22%3Afalse%2C%22dbov%22%3Afalse%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724772%7D&eventCounters=%7B%22mousemove%22%3A34%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 19:59:33 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 14018f7dbaa2ab702e14328f6136ce06.cloudfront.net (CloudFront)
+x-amz-cf-pop: BKK50-P4
+x-amz-cf-id: 82ealg-BI488qKaYfDn5B5CJfV8uv0_p_Pu5SMn1IHiZpuJ0cLOEsQ==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=urZoKXShjHjLxeCtLl9FLRMufSOg7p_2~p0DLC3S6Jz2HCj6CN23bqARESgmvcAqKjANjgr4w_yWP8tHS1vEes5j5GCj94ZtzZVBIWwJk8sWEuCANonR8zli~DUWQ03d; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: urZoKXShjHjLxeCtLl9FLRMufSOg7p_2~p0DLC3S6Jz2HCj6CN23bqARESgmvcAqKjANjgr4w_yWP8tHS1vEes5j5GCj94ZtzZVBIWwJk8sWEuCANonR8zli~DUWQ03d"
+]
+Cookies: source=pc; region=MY; mspid2=c111e103d7ac402bd77f0459dadace21; datadome=urZoKXShjHjLxeCtLl9FLRMufSOg7p_2%7Ep0DLC3S6Jz2HCj6CN23bqARESgmvcAqKjANjgr4w_yWP8tHS1vEes5j5GCj94ZtzZVBIWwJk8sWEuCANonR8zli%7EDUWQ03d
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 19:59:35 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMA9WgEHW3SUhEA38zaBw==
+X-Dd-B: 1
+X-Set-Cookie: datadome=tXp4HSKuxZxV96L52ovL9wECK~QPB5B4z1N88Z7SvUCRnTR_Qi7z9RPscS1qyxVXz6EY82SAQsgXPxsetXYCDstoi5HYse5TEl2GpWZAOj3jOuAHBV3_NWhj29Of6qPN; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMA9WgEHW3SUhEA38zaBw==&cid=tXp4HSKuxZxV96L52ovL9wECK~QPB5B4z1N88Z7SvUCRnTR_Qi7z9RPscS1qyxVXz6EY82SAQsgXPxsetXYCDstoi5HYse5TEl2GpWZAOj3jOuAHBV3_NWhj29Of6qPN&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=9e4f0b404617daed1f7a355bdadc3d5b451a3b950430b9e0a82785c3eaf1a7bd"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: urZoKXShjHjLxeCtLl9FLRMufSOg7p_2~p0DLC3S6Jz2HCj6CN23bqARESgmvcAqKjANjgr4w_yWP8tHS1vEes5j5GCj94ZtzZVBIWwJk8sWEuCANonR8zli~DUWQ03d",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=c111e103d7ac402bd77f0459dadace21; datadome=urZoKXShjHjLxeCtLl9FLRMufSOg7p_2%7Ep0DLC3S6Jz2HCj6CN23bqARESgmvcAqKjANjgr4w_yWP8tHS1vEes5j5GCj94ZtzZVBIWwJk8sWEuCANonR8zli%7EDUWQ03d
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:37 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=p87csyuwk8a2jj92subgosif1qicabgq; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: 8On7vPenDjVmWv0oqzsr1cKACxD0D0IoTTMzVKNzh4pRBhsnEJCJ70Kmf2LjsaaZlXwAqUr_SxDMsWZiPBScq9N3GW33I1jgH4J3eVQuN5zF3Lo7jVy_tchHKX4v~d6c",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;  Trident/5.0)",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=370effd0b7c8f931b82e166cb4bbec54; datadome=8On7vPenDjVmWv0oqzsr1cKACxD0D0IoTTMzVKNzh4pRBhsnEJCJ70Kmf2LjsaaZlXwAqUr_SxDMsWZiPBScq9N3GW33I1jgH4J3eVQuN5zF3Lo7jVy_tchHKX4v%7Ed6c
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:37 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=g9nq7gvr9ob2ebhbk1e5plk4z2nveivy; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:46 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 19:59:46 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=e601b4bcd80a439fc0e28c9d546c04f3;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "154.247.228.30";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3302",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A17.585%2C%22ifov%22%3Atrue%2C%22hc%22%3A6%2C%22br_oh%22%3A638%2C%22br_ow%22%3A968%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28X11%3B+Linux+x86_64%3B+rv%3A57.0%29+Gecko%5C%2F20100101+Firefox%5C%2F57.0%22%2C%22wbd%22%3Atrue%2C%22dp0%22%3Afalse%2C%22tagpu%22%3Anull%2C%22wdif%22%3Afalse%2C%22wdifrm%22%3Atrue%2C%22npmtm%22%3Atrue%2C%22br_h%22%3A1155%2C%22br_w%22%3A600%2C%22isf%22%3Atrue%2C%22nddc%22%3Anull%2C%22rs_h%22%3A629%2C%22rs_w%22%3A923%2C%22rs_cd%22%3Anull%2C%22phe%22%3Atrue%2C%22nm%22%3Atrue%2C%22jsf%22%3Atrue%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A1069%2C%22ars_w%22%3A1118%2C%22tz%22%3A335%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Atrue%2C%22plg%22%3A6%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A27%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Afalse%2C%22awe%22%3Afalse%2C%22geb%22%3Atrue%2C%22dat%22%3Afalse%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Afalse%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Afalse%2C%22acaa%22%3Anull%2C%22acaats%22%3Afalse%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Atrue%2C%22acf%22%3Anull%2C%22acfts%22%3Afalse%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Atrue%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Atrue%2C%22acwm%22%3Anull%2C%22acwmts%22%3Atrue%2C%22ocpt%22%3Afalse%2C%22vco%22%3Anull%2C%22vcots%22%3Atrue%2C%22vch%22%3Anull%2C%22vchts%22%3Atrue%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Atrue%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Afalse%2C%22lgs%22%3Anull%2C%22lgsod%22%3Afalse%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Atrue%2C%22idn%22%3Anull%2C%22capi%22%3Atrue%2C%22svde%22%3Atrue%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Afalse%2C%22spwn%22%3Atrue%2C%22emt%22%3Afalse%2C%22bfr%22%3Afalse%2C%22dbov%22%3Afalse%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724788%7D&eventCounters=%7B%22mousemove%22%3A59%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 19:59:49 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 a25f09e8931e11a7adbeccf05e99a456.cloudfront.net (CloudFront)
+x-amz-cf-pop: BKK50-P4
+x-amz-cf-id: dX8qw7uYoYczaKPh5LHCIvUdCj1xn2braGSJpKKzZSjqGHjZAe0D0Q==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=fAmWrD9QiOf3JxpLRgCt3g318OehOpbLfCfmixkrEF8EOYopjvlXU6~hCwvMTMu3VKAsvl87no8J8obWiXfb_GVgVS7AasoQP~lib4QAEnDE74a0b6nI3BZiin8MTzF3; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: fAmWrD9QiOf3JxpLRgCt3g318OehOpbLfCfmixkrEF8EOYopjvlXU6~hCwvMTMu3VKAsvl87no8J8obWiXfb_GVgVS7AasoQP~lib4QAEnDE74a0b6nI3BZiin8MTzF3"
+]
+Cookies: source=pc; region=MY; mspid2=e601b4bcd80a439fc0e28c9d546c04f3; datadome=fAmWrD9QiOf3JxpLRgCt3g318OehOpbLfCfmixkrEF8EOYopjvlXU6%7EhCwvMTMu3VKAsvl87no8J8obWiXfb_GVgVS7AasoQP%7Elib4QAEnDE74a0b6nI3BZiin8MTzF3
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 19:59:53 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMAPAWrKtpUbUgAWO4x1A==
+X-Dd-B: 1
+X-Set-Cookie: datadome=QY5G_2RRZhB92fMKsY1p2VJPblo4d7kJWT5yuFPpTfmPHW5xO2BiyQByod5JFDtNlCJ_9WcpB36jCFvNuzT0oDweJdBMbVM8JKP5mO9g0o_hSsvSAlf8_KuHOQLsH94B; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAPAWrKtpUbUgAWO4x1A==&cid=QY5G_2RRZhB92fMKsY1p2VJPblo4d7kJWT5yuFPpTfmPHW5xO2BiyQByod5JFDtNlCJ_9WcpB36jCFvNuzT0oDweJdBMbVM8JKP5mO9g0o_hSsvSAlf8_KuHOQLsH94B&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=7c0150b5914746bdb4c5d5b2d86b8cfaab5844971a83479797857f2adddb9739"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: fAmWrD9QiOf3JxpLRgCt3g318OehOpbLfCfmixkrEF8EOYopjvlXU6~hCwvMTMu3VKAsvl87no8J8obWiXfb_GVgVS7AasoQP~lib4QAEnDE74a0b6nI3BZiin8MTzF3",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=e601b4bcd80a439fc0e28c9d546c04f3; datadome=fAmWrD9QiOf3JxpLRgCt3g318OehOpbLfCfmixkrEF8EOYopjvlXU6%7EhCwvMTMu3VKAsvl87no8J8obWiXfb_GVgVS7AasoQP%7Elib4QAEnDE74a0b6nI3BZiin8MTzF3
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:55 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=4cyff0vh8otk3vrkntyrjqfr9m5ru4rc; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 19:59:58 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 19:59:58 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=c061d7657b44cacbebbfb8dcf394aac7;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "176.234.124.57";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3322",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A17.456%2C%22ifov%22%3Afalse%2C%22hc%22%3A15%2C%22br_oh%22%3A1161%2C%22br_ow%22%3A634%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10.12%3B+rv%3A57.0%29+Gecko%5C%2F20100101+Firefox%5C%2F57.0%22%2C%22wbd%22%3Afalse%2C%22dp0%22%3Afalse%2C%22tagpu%22%3Anull%2C%22wdif%22%3Afalse%2C%22wdifrm%22%3Afalse%2C%22npmtm%22%3Afalse%2C%22br_h%22%3A1057%2C%22br_w%22%3A669%2C%22isf%22%3Atrue%2C%22nddc%22%3Anull%2C%22rs_h%22%3A896%2C%22rs_w%22%3A601%2C%22rs_cd%22%3Anull%2C%22phe%22%3Afalse%2C%22nm%22%3Atrue%2C%22jsf%22%3Atrue%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A1020%2C%22ars_w%22%3A1032%2C%22tz%22%3A344%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Atrue%2C%22plg%22%3A1%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A99%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Atrue%2C%22awe%22%3Atrue%2C%22geb%22%3Afalse%2C%22dat%22%3Afalse%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Afalse%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Afalse%2C%22acaa%22%3Anull%2C%22acaats%22%3Afalse%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Afalse%2C%22acf%22%3Anull%2C%22acfts%22%3Atrue%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Atrue%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Atrue%2C%22acwm%22%3Anull%2C%22acwmts%22%3Afalse%2C%22ocpt%22%3Atrue%2C%22vco%22%3Anull%2C%22vcots%22%3Atrue%2C%22vch%22%3Anull%2C%22vchts%22%3Atrue%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Afalse%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Atrue%2C%22lgs%22%3Anull%2C%22lgsod%22%3Atrue%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Afalse%2C%22idn%22%3Anull%2C%22capi%22%3Atrue%2C%22svde%22%3Afalse%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Afalse%2C%22spwn%22%3Afalse%2C%22emt%22%3Atrue%2C%22bfr%22%3Afalse%2C%22dbov%22%3Atrue%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724798%7D&eventCounters=%7B%22mousemove%22%3A33%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 19:59:59 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 e4687f069c79e8b279ee15c0a5405c00.cloudfront.net (CloudFront)
+x-amz-cf-pop: BKK50-P4
+x-amz-cf-id: aGLPW4oRlTr73CMZxJbvJesPq7iFtpMlInpKfhdopAGnIKExA8X6sQ==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=xrK_0rT586RVAkLKr_r5lu33OnoTYErp4jov~CojKV8bA_gvCXJ8rA858pEXOYXwGJfzGFxltzqma8UW9LA8_cZc5~kkw~g288FrZpQn1EGNUrw95vPKGepA6p5QCfgz; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: xrK_0rT586RVAkLKr_r5lu33OnoTYErp4jov~CojKV8bA_gvCXJ8rA858pEXOYXwGJfzGFxltzqma8UW9LA8_cZc5~kkw~g288FrZpQn1EGNUrw95vPKGepA6p5QCfgz"
+]
+Cookies: source=pc; region=MY; mspid2=c061d7657b44cacbebbfb8dcf394aac7; datadome=xrK_0rT586RVAkLKr_r5lu33OnoTYErp4jov%7ECojKV8bA_gvCXJ8rA858pEXOYXwGJfzGFxltzqma8UW9LA8_cZc5%7Ekkw%7Eg288FrZpQn1EGNUrw95vPKGepA6p5QCfgz
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 20:00:01 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMAKaZoRqhMiHQAeMRrVw==
+X-Dd-B: 1
+X-Set-Cookie: datadome=~KfhbHzpvFLJfvsMYBqBPgiNZP_aVoV3cFFxfrPOTQI9ims__U0dgiBVUqQ7VfXevcj19Ch6BmmROCati4ccfCc34tpOxfAnsbanN7Mtiwt9Ptj_vzJCUOjf~y6sHAv6; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAKaZoRqhMiHQAeMRrVw==&cid=~KfhbHzpvFLJfvsMYBqBPgiNZP_aVoV3cFFxfrPOTQI9ims__U0dgiBVUqQ7VfXevcj19Ch6BmmROCati4ccfCc34tpOxfAnsbanN7Mtiwt9Ptj_vzJCUOjf~y6sHAv6&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=012338d03d64c7eec2b6172ac94e862d815cc0c3648fbab065b0c07ce2ea779f"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: xrK_0rT586RVAkLKr_r5lu33OnoTYErp4jov~CojKV8bA_gvCXJ8rA858pEXOYXwGJfzGFxltzqma8UW9LA8_cZc5~kkw~g288FrZpQn1EGNUrw95vPKGepA6p5QCfgz",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=c061d7657b44cacbebbfb8dcf394aac7; datadome=xrK_0rT586RVAkLKr_r5lu33OnoTYErp4jov%7ECojKV8bA_gvCXJ8rA858pEXOYXwGJfzGFxltzqma8UW9LA8_cZc5%7Ekkw%7Eg288FrZpQn1EGNUrw95vPKGepA6p5QCfgz
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 20:00:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=2awj2apx402blufbe2pa1nkm8id4d33p; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 20:00:05 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 20:00:05 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=ba7e4e50b9439c2d604352997e7b951e;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "78.182.151.76";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3347",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A18.015%2C%22ifov%22%3Afalse%2C%22hc%22%3A1%2C%22br_oh%22%3A969%2C%22br_ow%22%3A1137%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28Windows+NT+6.1%29+AppleWebKit%5C%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%5C%2F62.0.3202.94+Safari%5C%2F537.36%22%2C%22wbd%22%3Atrue%2C%22dp0%22%3Atrue%2C%22tagpu%22%3Anull%2C%22wdif%22%3Afalse%2C%22wdifrm%22%3Atrue%2C%22npmtm%22%3Afalse%2C%22br_h%22%3A1146%2C%22br_w%22%3A752%2C%22isf%22%3Afalse%2C%22nddc%22%3Anull%2C%22rs_h%22%3A1079%2C%22rs_w%22%3A1015%2C%22rs_cd%22%3Anull%2C%22phe%22%3Atrue%2C%22nm%22%3Atrue%2C%22jsf%22%3Atrue%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A683%2C%22ars_w%22%3A1161%2C%22tz%22%3A39%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Afalse%2C%22plg%22%3A1%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A38%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Afalse%2C%22awe%22%3Afalse%2C%22geb%22%3Afalse%2C%22dat%22%3Afalse%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Atrue%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Afalse%2C%22acaa%22%3Anull%2C%22acaats%22%3Afalse%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Afalse%2C%22acf%22%3Anull%2C%22acfts%22%3Afalse%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Atrue%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Afalse%2C%22acwm%22%3Anull%2C%22acwmts%22%3Atrue%2C%22ocpt%22%3Atrue%2C%22vco%22%3Anull%2C%22vcots%22%3Afalse%2C%22vch%22%3Anull%2C%22vchts%22%3Afalse%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Afalse%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Atrue%2C%22lgs%22%3Anull%2C%22lgsod%22%3Afalse%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Afalse%2C%22idn%22%3Anull%2C%22capi%22%3Atrue%2C%22svde%22%3Afalse%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Afalse%2C%22spwn%22%3Atrue%2C%22emt%22%3Afalse%2C%22bfr%22%3Atrue%2C%22dbov%22%3Atrue%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724805%7D&eventCounters=%7B%22mousemove%22%3A36%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 20:00:09 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 6db9ef0587d963a7afc68c7c316285d4.cloudfront.net (CloudFront)
+x-amz-cf-pop: NRT12-P4
+x-amz-cf-id: Oz0HKEB1XHRF5M1HG5eosRQp9P451W8KxVip9XPUfr8EHy5dlAlXvA==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=d63v0~UrkcZegvmaxKw8FDGNysxroSiX6nO2P4EG5eR56RjHfQtLb5OCAmXs7FigjyV9x2UYlymrpXj008_3cYE9Bpl605eUejdcoJTvOj2xbbUZFBRcggQpqJ6VLYYg; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: d63v0~UrkcZegvmaxKw8FDGNysxroSiX6nO2P4EG5eR56RjHfQtLb5OCAmXs7FigjyV9x2UYlymrpXj008_3cYE9Bpl605eUejdcoJTvOj2xbbUZFBRcggQpqJ6VLYYg"
+]
+Cookies: source=pc; region=MY; mspid2=ba7e4e50b9439c2d604352997e7b951e; datadome=d63v0%7EUrkcZegvmaxKw8FDGNysxroSiX6nO2P4EG5eR56RjHfQtLb5OCAmXs7FigjyV9x2UYlymrpXj008_3cYE9Bpl605eUejdcoJTvOj2xbbUZFBRcggQpqJ6VLYYg
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 20:00:13 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMAPS0MJt4z6g8AsOp8OQ==
+X-Dd-B: 1
+X-Set-Cookie: datadome=~svI2fWJZwbWARJ2m9jdDlBSmtYjmAOLsHGyCCo1Ke_KciD88zfcQ6wHGozqRN~KiJYl2u6IULDRODMY0DesIBBW~1pqO_Qh~RHIdOFRNrjKDbVnRufzLEUtEd_2qjR7; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAPS0MJt4z6g8AsOp8OQ==&cid=~svI2fWJZwbWARJ2m9jdDlBSmtYjmAOLsHGyCCo1Ke_KciD88zfcQ6wHGozqRN~KiJYl2u6IULDRODMY0DesIBBW~1pqO_Qh~RHIdOFRNrjKDbVnRufzLEUtEd_2qjR7&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=6b16f808f7bd5dd353cf9cddaf60b8e1033f82bd042a2e12eb62fb4d5f7ee34f"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: d63v0~UrkcZegvmaxKw8FDGNysxroSiX6nO2P4EG5eR56RjHfQtLb5OCAmXs7FigjyV9x2UYlymrpXj008_3cYE9Bpl605eUejdcoJTvOj2xbbUZFBRcggQpqJ6VLYYg",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=ba7e4e50b9439c2d604352997e7b951e; datadome=d63v0%7EUrkcZegvmaxKw8FDGNysxroSiX6nO2P4EG5eR56RjHfQtLb5OCAmXs7FigjyV9x2UYlymrpXj008_3cYE9Bpl605eUejdcoJTvOj2xbbUZFBRcggQpqJ6VLYYg
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 20:00:40 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=rcp5whsegy866f76e292o1r45tygoo16; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
+URL: https://shop.garena.my/app
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-origin",
+    "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+]
+Cookies: 
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 20:00:45 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: Express
+Set-Cookie: source=pc; Path=/; Secure; SameSite=None
+Set-Cookie: region=MY; Max-Age=31536000; Path=/; Expires=Sat, 20 Dec 2025 20:00:45 GMT; Secure; SameSite=None
+Vary: Accept-Encoding
+Set-Cookie: mspid2=2eacfa17348bbe1c6f864cb79e4e04e2;Path=/;Max-Age=31536000;SameSite=none;Secure
+Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+
+
+Response Body: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-9be8f723.js"></script>
+
+    <script>
+      !(function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c),
+          n = b.getElementsByTagName(c)[0];
+        (m.async = 1), (m.src = d), n.parentNode.insertBefore(m, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://dd.garena.com/tags.js',
+        'AE3F04AD3F0D3A462481A337485081',
+        {
+          abortAsyncOnCaptchaDisplay: false,
+          ajaxListenerPathExclusion: [
+            'https://www.google-analytics.com',
+            'api-js.datadome.co',
+            'dd.garena.com',
+          ],
+          disableAutoRefreshOnCaptchaPassed: true,
+          enableTagEvents: true,
+          endpoint: 'https://dd.garena.com/js/',
+          sessionByHeader: false,
+        },
+      );
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WGFN7FF5');
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <script>window.__CLIENT_IP__ = "24.5.127.82";window.__SERVICE_VERSION__ = "mshop_frontend_20241219";window.__SPLIT_GROUP__ = "treatment2";window.__SOURCE__ = "pc";window.__COUNTRY__ = "MY";</script>
+    <!--app-title-->
+    <!--app-meta-->
+    <script type="module" crossorigin src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-fdb39ea2.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/react-31beb1fc.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/images-b9f8553f.js">
+    <link rel="stylesheet" href="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/style-935be921.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGFN7FF5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"><!--app-html--></div>
+    <div id="portal"><!--portal-html--></div>
+    <script
+      id="msp-analytic"
+      async
+      src="https://cdn-gop.garenanow.com/gop/mshop/www/live/static/lib/analytic.00becb24.iife.js?domain=my"
+    ></script>
+    
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/polyfills-legacy-04ddfb6d.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="https://cdn-gop.garenanow.com/gop/mshop/www/live/assets/index-legacy-3346d569.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
+
+
+URL: https://dd.garena.com/js/
+Headers: [
+    "accept: */*",
+    "accept-language: id-ID,id;q=0.9",
+    "content-length: 3370",
+    "content-type: application/x-www-form-urlencoded",
+    "dnt: 1",
+    "origin: https://shop.garena.my",
+    "priority: u=1, i",
+    "sec-ch-ua: \"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "sec-fetch-dest: empty",
+    "sec-fetch-mode: cors",
+    "sec-fetch-site: same-site",
+    "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+]
+Cookies: 
+Post Fields: jsData=%7B%22ttst%22%3A18.439%2C%22ifov%22%3Afalse%2C%22hc%22%3A14%2C%22br_oh%22%3A628%2C%22br_ow%22%3A1104%2C%22ua%22%3A%22Mozilla%5C%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_12_6%29+AppleWebKit%5C%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%5C%2F62.0.3202.94+Safari%5C%2F537.36%22%2C%22wbd%22%3Afalse%2C%22dp0%22%3Atrue%2C%22tagpu%22%3Anull%2C%22wdif%22%3Afalse%2C%22wdifrm%22%3Afalse%2C%22npmtm%22%3Atrue%2C%22br_h%22%3A730%2C%22br_w%22%3A1068%2C%22isf%22%3Afalse%2C%22nddc%22%3Anull%2C%22rs_h%22%3A877%2C%22rs_w%22%3A979%2C%22rs_cd%22%3Anull%2C%22phe%22%3Afalse%2C%22nm%22%3Afalse%2C%22jsf%22%3Afalse%2C%22lg%22%3A%22en-US%22%2C%22pr%22%3Anull%2C%22ars_h%22%3A986%2C%22ars_w%22%3A958%2C%22tz%22%3A-622%2C%22str_ss%22%3Anull%2C%22str_ls%22%3Anull%2C%22str_idb%22%3Anull%2C%22str_odb%22%3Anull%2C%22plgod%22%3Atrue%2C%22plg%22%3A3%2C%22plgne%22%3Anull%2C%22plgre%22%3Anull%2C%22plgof%22%3Anull%2C%22plggt%22%3Anull%2C%22pltod%22%3Anull%2C%22hcovdr%22%3Anull%2C%22hcovdr2%22%3Anull%2C%22plovdr%22%3Anull%2C%22plovdr2%22%3Anull%2C%22ftsovdr%22%3Anull%2C%22ftsovdr2%22%3Anull%2C%22lb%22%3Anull%2C%22eva%22%3A63%2C%22lo%22%3Anull%2C%22ts_mtp%22%3Anull%2C%22ts_tec%22%3Anull%2C%22ts_tsa%22%3Anull%2C%22vnd%22%3Anull%2C%22bid%22%3Anull%2C%22mmt%22%3A%22application%5C%2Fpdf%2Ctext%5C%2Fpdf%22%2C%22plu%22%3A%22PDF+Viewer%2CChrome+PDF+Viewer%22%2C%22hdn%22%3Afalse%2C%22awe%22%3Afalse%2C%22geb%22%3Atrue%2C%22dat%22%3Afalse%2C%22med%22%3Anull%2C%22aco%22%3Anull%2C%22acots%22%3Atrue%2C%22acmp%22%3Anull%2C%22acmpts%22%3Anull%2C%22acw%22%3Anull%2C%22acwts%22%3Anull%2C%22acma%22%3Anull%2C%22acmats%22%3Atrue%2C%22acaa%22%3Anull%2C%22acaats%22%3Atrue%2C%22ac3%22%3Anull%2C%22ac3ts%22%3Afalse%2C%22acf%22%3Anull%2C%22acfts%22%3Atrue%2C%22acmp4%22%3Anull%2C%22acmp4ts%22%3Afalse%2C%22acmp3%22%3Anull%2C%22acmp3ts%22%3Afalse%2C%22acwm%22%3Anull%2C%22acwmts%22%3Atrue%2C%22ocpt%22%3Afalse%2C%22vco%22%3Anull%2C%22vcots%22%3Afalse%2C%22vch%22%3Anull%2C%22vchts%22%3Atrue%2C%22vcw%22%3Anull%2C%22vcwts%22%3Anull%2C%22vc3%22%3Anull%2C%22vc3ts%22%3Anull%2C%22vcmp%22%3Anull%2C%22vcmpts%22%3Anull%2C%22vcq%22%3Anull%2C%22vcqts%22%3Anull%2C%22vc1%22%3Anull%2C%22vc1ts%22%3Anull%2C%22dvm%22%3Anull%2C%22sqt%22%3Afalse%2C%22so%22%3Anull%2C%22wdw%22%3Anull%2C%22cokys%22%3A%22bG9hZFRpbWVzc2NyaXB0%22%2C%22ecpc%22%3Atrue%2C%22lgs%22%3Anull%2C%22lgsod%22%3Afalse%2C%22psn%22%3Anull%2C%22edp%22%3Anull%2C%22addt%22%3Anull%2C%22wsdc%22%3Anull%2C%22ccsr%22%3Anull%2C%22nuad%22%3Anull%2C%22bcda%22%3Afalse%2C%22idn%22%3Anull%2C%22capi%22%3Afalse%2C%22svde%22%3Afalse%2C%22vpbq%22%3Anull%2C%22ucdv%22%3Atrue%2C%22spwn%22%3Afalse%2C%22emt%22%3Afalse%2C%22bfr%22%3Atrue%2C%22dbov%22%3Afalse%2C%22cfpfe%22%3Anull%2C%22stcfp%22%3Anull%2C%22ckwa%22%3Anull%2C%22prm%22%3Anull%2C%22tzp%22%3Anull%2C%22cvs%22%3Anull%2C%22usb%22%3Anull%2C%22emd%22%3Anull%2C%22glvd%22%3Anull%2C%22glrd%22%3Anull%2C%22wwl%22%3Anull%2C%22jset%22%3A1734724846%7D&eventCounters=%7B%22mousemove%22%3A70%2C%22click%22%3A0%2C%22scroll%22%3A0%2C%22touchstart%22%3A0%2C%22touchend%22%3A0%2C%22touchmove%22%3A0%2C%22keydown%22%3A0%2C%22keyup%22%3A0%7D&jsType=le&cid=2HUawIiWMPjzPBEI3XQqkx6hRqFGtITor6JuWcNokokyGb2HlKeJwnmW%7ExCBrIIFZynUs5%7Erm2QoxhOzdlPIGs9WCQCOla_OQ59fDpOJ2V6M5NG8DxiE8bapigOHr1ab&ddk=AE3F04AD3F0D3A462481A337485081&Referer=https%253A%252F%252Fshop.garena.my%252Fapp%26request%3D%252Fapp&responsePage=origin&ddv=4.35.3
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=utf-8
+content-length: 230
+date: Fri, 20 Dec 2024 20:00:49 GMT
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+server: DataDome
+pragma: no-cache
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+x-cache: Miss from cloudfront
+via: 1.1 a1822b92cbf5d3516743d4786d5b6020.cloudfront.net (CloudFront)
+x-amz-cf-pop: ZRH55-P1
+x-amz-cf-id: vBwtIssNwynQNY519R7ACqSVEHt8FLzPPNi6CGaBBkBGMRo7oOcEVA==
+x-content-type-options: nosniff
+access-control-allow-origin: *
+
+
+Response Body: {"status":200,"cookie":"datadome=ALQOjio4QEkBHI908lfJ2QWBrvQQvx4oJVe64tAIY~UyDq1eQOIfRkUHWmaZG9oFlmzvdTAk9GGP6XEdWlgHUdgwmjdkR84U64BM8HsH2a1gmPao0Sv_9aHS6X~~3vRn; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax"}
+
+URL: https://shop.garena.my/api/auth/player_id_login
+Headers: [
+    "Accept-Language: id-ID,id;q=0.9",
+    "Connection: keep-alive",
+    "Content-Length: 59",
+    "DNT: 1",
+    "Host: shop.garena.my",
+    "Origin: https://shop.garena.my",
+    "Referer: https://shop.garena.my/app",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-origin",
+    "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+    "accept: application/json",
+    "content-type: application/json",
+    "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+    "sec-ch-ua-mobile: ?0",
+    "sec-ch-ua-platform: \"Windows\"",
+    "x-datadome-clientid: ALQOjio4QEkBHI908lfJ2QWBrvQQvx4oJVe64tAIY~UyDq1eQOIfRkUHWmaZG9oFlmzvdTAk9GGP6XEdWlgHUdgwmjdkR84U64BM8HsH2a1gmPao0Sv_9aHS6X~~3vRn"
+]
+Cookies: source=pc; region=MY; mspid2=2eacfa17348bbe1c6f864cb79e4e04e2; datadome=ALQOjio4QEkBHI908lfJ2QWBrvQQvx4oJVe64tAIY%7EUyDq1eQOIfRkUHWmaZG9oFlmzvdTAk9GGP6XEdWlgHUdgwmjdkR84U64BM8HsH2a1gmPao0Sv_9aHS6X%7E%7E3vRn
+Post Fields: {
+    "app_id": 100067,
+    "login_id": "2415290464",
+    "app_server_id": 0
+}
+Attempt: 1
+Status Code: 403
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 403 Forbidden
+Date: Fri, 20 Dec 2024 20:00:52 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 413
+Connection: keep-alive
+Vary: Accept-Encoding
+Accept-Ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Access-Control-Allow-Origin: https://shop.garena.my
+Access-Control-Expose-Headers: x-dd-b, x-set-cookie
+Cache-Control: max-age=0, private, no-cache, no-store, must-revalidate
+Charset: utf-8
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Datadome: protected
+X-Datadome-Cid: AHrlqAAAAAMAdJT9uxeEi4EASkfICA==
+X-Dd-B: 1
+X-Set-Cookie: datadome=JdIh9RyPzMsjaqkqlvIfE3ZsCEQ96Qyvey8xO5NkeItszfPJGVFwuhcbIkTM0Lw20NfpP4wABZCO1zSMb0wEjXbD83sBy09eNf7_5_8dnQ9GNOslRBT4wk7XgXjIBa7R; Max-Age=31536000; Domain=.garena.my; Path=/; Secure; SameSite=Lax
+
+
+Response Body: {"url": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAdJT9uxeEi4EASkfICA==&cid=JdIh9RyPzMsjaqkqlvIfE3ZsCEQ96Qyvey8xO5NkeItszfPJGVFwuhcbIkTM0Lw20NfpP4wABZCO1zSMb0wEjXbD83sBy09eNf7_5_8dnQ9GNOslRBT4wk7XgXjIBa7R&referer=HTTPS%3A%2F%2Fshop.garena.my%2Fapi%2Fauth%2Fplayer_id_login&hash=AE3F04AD3F0D3A462481A337485081&t=fe&s=39830&e=6978dfb2fe44b47da0b853cf74bb95c4c3b39de9d079ca301f74565a0842806e"}
+
+URL: https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc
+Headers: [
+    "Host: shop.garena.my",
+    "Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"",
+    "Accept: application/json",
+    "X-Datadome-Clientid: ALQOjio4QEkBHI908lfJ2QWBrvQQvx4oJVe64tAIY~UyDq1eQOIfRkUHWmaZG9oFlmzvdTAk9GGP6XEdWlgHUdgwmjdkR84U64BM8HsH2a1gmPao0Sv_9aHS6X~~3vRn",
+    "Accept-Language: en-US",
+    "Sec-Ch-Ua-Mobile: ?0",
+    "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+    "Sec-Ch-Ua-Platform: \"Windows\"",
+    "Sec-Fetch-Site: same-origin",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Dest: empty",
+    "Referer: https://shop.garena.my/app/100067/buy/0",
+    "Priority: u=1, i",
+    "Connection: keep-alive"
+]
+Cookies: source=pc; region=MY; mspid2=2eacfa17348bbe1c6f864cb79e4e04e2; datadome=ALQOjio4QEkBHI908lfJ2QWBrvQQvx4oJVe64tAIY%7EUyDq1eQOIfRkUHWmaZG9oFlmzvdTAk9GGP6XEdWlgHUdgwmjdkR84U64BM8HsH2a1gmPao0Sv_9aHS6X%7E%7E3vRn
+Post Fields: 
+Attempt: 1
+Status Code: 200
+Response Headers: HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2024 20:00:55 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type, x-csrf-token, x-datadome-clientid
+Set-Cookie: session_key=33c9wonbz6q6v9sej96fvxjaduxxzker; httponly; Path=/; secure
+Vary: Cookie
+
+
+Response Body: {"error":"error_require_login"}
+
