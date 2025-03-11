@@ -136,18 +136,21 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
         $this->cookies['session_key'] = $session_key;
 
         $headers = [
+            'Accept: application/json, text/plain, */*',
+            'Accept-Encoding: gzip, deflate, br',
+            'Accept-Language: en-US,en;q=0.9',
+            'Cache-Control: no-cache',
+            'Connection: keep-alive',
             'Host: shop.garena.my',
-            'Sec-Ch-Ua: "Chromium";v="127", "Not)A;Brand";v="99"',
-            'Accept: application/json',
-            'Accept-Language: en-US',
+            'Pragma: no-cache',
+            'sec-ch-ua: '.$this->sechcha,
+            'Referer: https://shop.garena.my/?channel=202278&item=100712',
             'Sec-Ch-Ua-Mobile: ?0',
             'User-Agent: '.$this->ua,
-            'Sec-Ch-Ua-Platform: "Windows"',
+            'Sec-Ch-Ua-Platform: "Android"',
             'Sec-Fetch-Site: same-origin',
             'Sec-Fetch-Mode: cors',
-            'Sec-Fetch-Dest: empty',
-            'Priority: u=1, i',
-            'Connection: keep-alive',
+            'Sec-Fetch-Dest: empty'
         ];
         $response = $this->fetch($url, null, $headers, $this->getCookie());
     
@@ -164,21 +167,27 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
 
     
     public function regionVerify() {
-        $url = "https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc";
+        $url = "https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=mb";
         $headers = [
-            'Host: shop.garena.my',
-            'Sec-Ch-Ua: "Chromium";v="127", "Not)A;Brand";v="99"',
-            'Accept: application/json',
-            'Accept-Language: en-US',
-            'Sec-Ch-Ua-Mobile: ?0',
-            'User-Agent: '.$this->ua,
-            'Sec-Ch-Ua-Platform: "Windows"',
-            'Sec-Fetch-Site: same-origin',
-            'Sec-Fetch-Mode: cors',
-            'Sec-Fetch-Dest: empty',
-            'Referer: https://shop.garena.my/app/100067/buy/0',
-            'Priority: u=1, i',
+
+            'Accept: application/json, text/plain, */*',
+            'Accept-Encoding: gzip, deflate, br',
+            'Accept-Language: en-US,en;q=0.9',
+            'Cache-Control: no-cache',
             'Connection: keep-alive',
+            'Host: shop.garena.my',
+            'Pragma: no-cache',
+            'Referer: https://shop.garena.my/?channel=202278&item=100712',
+            'Sec-Fetch-Dest: empty',
+            'Sec-Fetch-Mode: cors',
+            'Sec-Fetch-Site: same-origin',
+            'sec-ch-ua-mobile: ?1',
+            'sec-ch-ua-platform: "Android"',
+            'sec-ch-ua: '.$this->sechcha,
+            'User-Agent: '.$this->ua
+            
+
+
         ];
         $response = $this->fetch($url, null, $headers, $this->getCookie());
     
