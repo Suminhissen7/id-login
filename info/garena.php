@@ -60,7 +60,7 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
     }
 
 
-----------------------------------------------------------------------------------------
+
 
 
 
@@ -109,7 +109,7 @@ public function setDatadome() {
 
 
     
--------------------------------------------------------------------------------------------------------
+
     
 
     public function setPlayerId($player_id) {
@@ -160,7 +160,7 @@ public function setDatadome() {
     }
 
 
-------------------------------------------------------------------------------------------
+
 
     
     public function checkPlayerId($player_id, $session_key) {
@@ -195,7 +195,11 @@ public function setDatadome() {
     }
 
 
----------------------------------------------------------------------------------
+
+
+
+
+    
 
     
     public function regionVerify() {
