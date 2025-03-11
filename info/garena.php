@@ -90,7 +90,8 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
         ]);
         $headers = [
             'Accept: application/json, text/plain, */*',
-            'Accept-Encoding: gzip, deflate, br','Accept-Language: en-US,en;q=0.9',
+            'Accept-Encoding: gzip, deflate, br',
+            'Accept-Language: en-US,en;q=0.9',
             'Accept-Language: en-US,en;q=0.9',
             'Cache-Control: no-cache',
             'Connection: keep-alive',
