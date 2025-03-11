@@ -68,7 +68,7 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
     
     
 public function setDatadome() {
-    $url = "https://api.tobd.top/ua.php";
+    $url = "https://dd.garena.com/js/";
 
     // Raw form-urlencoded data
     $postFields = $this->ddata;
@@ -245,8 +245,8 @@ public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
     $logFile = 'log_requests.txt';
     
     // Proxy Settings (আপনার প্রক্সি ঠিকানা ও পোর্ট বসান)
-    $proxy = "p.webshare.io:80"; 
-    $proxyAuth = "wifpsyit-rotate:64eblydgxci2"; // যদি authentication লাগে
+    $proxy = "38.154.227.167:5868"; 
+    $proxyAuth = "wifpsyit:64eblydgxci2"; // যদি authentication লাগে
     
     while ($attempt < 3 && !$success) {
         $ch = curl_init();
