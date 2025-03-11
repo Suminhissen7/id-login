@@ -10,6 +10,7 @@ class Garena {
         require 'settings.php';
 
         $this->apiKey = $apiKey;
+        $this->ddata = $ddata;
         $this->player = [];
         $this->cookies = [];
 
@@ -61,23 +62,53 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
 
 ----------------------------------------------------------------------------------------
 
-    
-    
-    public function setDatadome() {
-        $url = "https://api.apighor.com/datadome-solver/";
-        $headers = [
-            'Content-Type: application/json',
-            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050'
-        ];
-        $response = $this->fetch($url, null, $headers);
-        $datadome = json_decode($response['body'], true)['datadome'];
-        
-        $this->cookies['datadome'] = $datadome;
 
-        return $this->cookies['datadome'];
+
+    
+    
+    
+public function setDatadome() {
+    $url = "https://api.tobd.top/ua.php";
+
+    // Raw form-urlencoded data
+    $postFields = $this->ddata;
+    $headers = [
+            'authority: dd.garena.com',
+            'accept: */*',
+            'accept-language: en-US,en;q=0.9',
+            'cache-control: no-cache',
+            'content-type: application/x-www-form-urlencoded',
+            'origin: https://shop.garena.my',
+            'pragma: no-cache',
+            'referer: https://shop.garena.my/',
+            'sec-ch-ua: '.$this->sechcha,
+            'sec-ch-ua-mobile: ?1',
+            'sec-ch-ua-platform: "Android"',
+            'sec-fetch-dest: empty',
+            'sec-fetch-mode: cors',
+            'sec-fetch-site: cross-site',
+            'user-agent: '.$this->ua
+    ];
+
+    // Send the request
+    $response = $this->fetch($url, $postFields, $headers);
+
+    // Decode the response to extract the cookie value
+    $cookie = json_decode($response['body'], true)['cookie'];
+
+    // Extract the 'datadome' value from the cookie
+    if (preg_match('/datadome=([a-zA-Z0-9\-_]+)/', $cookie, $matches)) {
+        $datadome = $matches[1];
+        $this->cookies['datadome'] = $datadome;  // Store in the cookies array
     }
 
+    return $this->cookies['datadome'];
+}
 
+
+
+
+    
 -------------------------------------------------------------------------------------------------------
     
 
