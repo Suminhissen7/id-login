@@ -4,7 +4,7 @@ require_once 'garena.php';
 require_once 'db.php';
 
 $garena = new Garena();
-$db = new DB();kj k
+$db = new DB();
 
 
 if (!$garena->authenticate()) {
