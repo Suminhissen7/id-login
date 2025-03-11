@@ -206,78 +206,96 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
         $this->respond(true, 'cannot_fetch_region');
     }
 
-    public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
-        $attempt = 0;
-        $success = false;
-        $response = null;
-        $err = null;
-        $logFile = 'log_requests.txt';
-        
-        while ($attempt < 3 && !$success) {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-            curl_setopt($ch, CURLOPT_HEADER, 1);
-            if ($postFields !== null) {
-                curl_setopt($ch, CURLOPT_POST, 1);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-            }
-            if (!empty($headers)) {
-                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            }
-            if ($cookie !== null) {
-                curl_setopt($ch, CURLOPT_COOKIE, $cookie);
-            }
+public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
+    $attempt = 0;
+    $success = false;
+    $response = null;
+    $err = null;
+    $logFile = 'log_requests.txt';
     
-            // Eksekusi request
-            $response = curl_exec($ch);
-            
-            // Log permintaan
-            $logData = "URL: " . $url . "\n";
-            $logData .= "Headers: " . json_encode($headers, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
-            $logData .= "Cookies: " . $cookie . "\n";
+    // Proxy Settings (আপনার প্রক্সি ঠিকানা ও পোর্ট বসান)
+    $proxy = "p.webshare.io:80"; 
+    $proxyAuth = "wifpsyit-rotate:64eblydgxci2"; // যদি authentication লাগে
+    
+    while ($attempt < 3 && !$success) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_HEADER, 1);
 
-            if (is_array(json_decode($postFields, true))) {
-                $postFields = json_decode($postFields, true);
-                $logData .= "Post Fields: " . json_encode($postFields, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
-            } else {
-                $logData .= "Post Fields: " . $postFields . "\n";
-            }
-            $logData .= "Attempt: " . ($attempt + 1) . "\n";
-            
-            if (curl_errno($ch)) {
-                $err = curl_error($ch);
-                $attempt++;
-                $logData .= "Error: " . $err . "\n\n";
-            } else {
-                $success = true;
-            }
-            
-            $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-            $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            $header = substr($response, 0, $header_size);
-            $body = substr($response, $header_size);
-            
-            // Log response
-            $logData .= "Status Code: " . $statusCode . "\n";
-            $logData .= "Response Headers: " . $header . "\n";
-            $logData .= "Response Body: " . $body . "\n\n";
-            
-            // Tulis ke log file
-            // file_put_contents($logFile, $logData, FILE_APPEND);
-            
-            curl_close($ch);
+        // Proxy সেট করা হচ্ছে
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
+
+        if ($postFields !== null) {
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
         }
-    
-        if (!$success) {
-            $this->respond(true, 'error_proxy_timeout: '.$err);
+        if (!empty($headers)) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         }
-    
-        return ['status' => $statusCode, 'header' => $header, 'body' => $body];
-    }    
+        if ($cookie !== null) {
+            curl_setopt($ch, CURLOPT_COOKIE, $cookie);
+        }
+
+        // Request Execute
+        $response = curl_exec($ch);
+        
+        // Log Request
+        $logData = "URL: " . $url . "\n";
+        $logData .= "Proxy: " . $proxy . "\n";
+        $logData .= "Headers: " . json_encode($headers, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
+        $logData .= "Cookies: " . $cookie . "\n";
+
+        if (is_array(json_decode($postFields, true))) {
+            $postFields = json_decode($postFields, true);
+            $logData .= "Post Fields: " . json_encode($postFields, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
+        } else {
+            $logData .= "Post Fields: " . $postFields . "\n";
+        }
+        $logData .= "Attempt: " . ($attempt + 1) . "\n";
+        
+        if (curl_errno($ch)) {
+            $err = curl_error($ch);
+            $attempt++;
+            $logData .= "Error: " . $err . "\n\n";
+        } else {
+            $success = true;
+        }
+        
+        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $header = substr($response, 0, $header_size);
+        $body = substr($response, $header_size);
+        
+        // Log response
+        $logData .= "Status Code: " . $statusCode . "\n";
+        $logData .= "Response Headers: " . $header . "\n";
+        $logData .= "Response Body: " . $body . "\n\n";
+        
+        // Tulis ke log file
+        // file_put_contents($logFile, $logData, FILE_APPEND);
+        
+        curl_close($ch);
+    }
+
+    if (!$success) {
+        $this->respond(true, 'error_proxy_timeout: '.$err);
+    }
+
+    return ['status' => $statusCode, 'header' => $header, 'body' => $body];
+}    
+
+
+
+
+
+
+
+
 
     public function setCookiesFromHeader($header) {
         preg_match_all('/^set-cookie:\s*([^;]*)/mi', $header, $matches);
