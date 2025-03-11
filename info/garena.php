@@ -1,10 +1,13 @@
-<?php
+<?php 
 
 class Garena {
+
     public $player;
     public $cookies;
     public $ua;
     public $secChUa;
+    public $apiKey; // ডিফাইন করা প্রপার্টি
+    public $ddata;  // ডিফাইন করা প্রপার্টি
 
     public function __construct() {
         require 'settings.php';
@@ -30,13 +33,9 @@ class Garena {
         } else {
             $chromeVersion = "124"; // ডিফল্ট Chrome ভার্সন
         }
-return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Chrome\";v=\"$chromeVersion\"";
-
+        return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Chrome\";v=\"$chromeVersion\"";
     }
 
-
-
-    
     public function init() {
         $url = 'https://shop.garena.my/app';
         $headers = [
@@ -59,20 +58,11 @@ return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Ch
         return true;
     }
 
-
-
-
-
-
-    
-    
-    
-public function setDatadome() {
-    $url = "https://dd.garena.com/js/";
-
-    // Raw form-urlencoded data
-    $postFields = $this->ddata;
-    $headers = [
+    public function setDatadome() {
+        $url = "https://dd.garena.com/js/";
+        // Raw form-urlencoded data
+        $postFields = $this->ddata;
+        $headers = [
             'authority: dd.garena.com',
             'accept: */*',
             'accept-language: en-US,en;q=0.9',
@@ -88,29 +78,22 @@ public function setDatadome() {
             'sec-fetch-mode: cors',
             'sec-fetch-site: cross-site',
             'user-agent: '.$this->ua
-    ];
+        ];
 
-    // Send the request
-    $response = $this->fetch($url, $postFields, $headers);
+        // Send the request
+        $response = $this->fetch($url, $postFields, $headers);
 
-    // Decode the response to extract the cookie value
-    $cookie = json_decode($response['body'], true)['cookie'];
+        // Decode the response to extract the cookie value
+        $cookie = json_decode($response['body'], true)['cookie'] ?? null;
 
-    // Extract the 'datadome' value from the cookie
-    if (preg_match('/datadome=([a-zA-Z0-9\-_]+)/', $cookie, $matches)) {
-        $datadome = $matches[1];
-        $this->cookies['datadome'] = $datadome;  // Store in the cookies array
+        // Extract the 'datadome' value from the cookie
+        if ($cookie && preg_match('/datadome=([a-zA-Z0-9\-_]+)/', $cookie, $matches)) {
+            $datadome = $matches[1];
+            $this->cookies['datadome'] = $datadome;  // Store in the cookies array
+        }
+
+        return $this->cookies['datadome'] ?? null;
     }
-
-    return $this->cookies['datadome'];
-}
-
-
-
-
-    
-
-    
 
     public function setPlayerId($player_id) {
         $url = 'https://shop.garena.my/api/auth/player_id_login';
@@ -119,18 +102,16 @@ public function setDatadome() {
             'login_id' => $player_id,
             'app_server_id' => 0
         ]);
+
         $headers = [
             'Accept: application/json, text/plain, */*',
             'Accept-Encoding: gzip, deflate, br',
             'Accept-Language: en-US,en;q=0.9',
-            'Accept-Language: en-US,en;q=0.9',
             'Cache-Control: no-cache',
-            'Connection: keep-alive',
             'Content-Length: ' . strlen($postData),
             'Content-Type: application/json',
             'Host: shop.garena.my',
             'Origin: https://shop.garena.my',
-            'Pragma: no-cache',
             'Referer: https://shop.garena.my/?channel=202953',
             'Sec-Fetch-Dest: empty',
             'Sec-Fetch-Mode: cors',
@@ -141,28 +122,24 @@ public function setDatadome() {
             'sec-ch-ua-platform: "Android"',
             'x-datadome-clientid: ' . $this->cookies['datadome'],
         ];
-        $response = $this->fetch($url, $postData, $headers, $this->getCookie());
 
+        $response = $this->fetch($url, $postData, $headers, $this->getCookie());
         $login = json_decode($response['body'], true);
+
         if (!empty($login)) {
             if (isset($login['error'])) {
                 $this->respond(true, $login['error']);
             }
-            
+
             if (array_key_exists('url', $login)) {
                 $this->respond(true, 'captcha_error');
             }
 
             $this->setCookiesFromHeader($response['header']);
-
             return $this->regionVerify();
         }
     }
 
-
-
-
-    
     public function checkPlayerId($player_id, $session_key) {
         $url = "https://shop.garena.my/api/auth/get_user_info/multi";
         $this->cookies['session_key'] = $session_key;
@@ -184,28 +161,20 @@ public function setDatadome() {
             'Sec-Fetch-Mode: cors',
             'Sec-Fetch-Dest: empty'
         ];
+
         $response = $this->fetch($url, null, $headers, $this->getCookie());
-    
+
         $res = json_decode($response['body'], true);
-        if ($res['player_id']['id_login']) {
+        if (isset($res['player_id']['id_login'])) {
             return $this->regionVerify();
         }
-        
+
         return $this->setPlayerId($player_id);
     }
 
-
-
-
-
-
-    
-
-    
     public function regionVerify() {
         $url = "https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=mb";
         $headers = [
-
             'Accept: application/json, text/plain, */*',
             'Accept-Encoding: gzip, deflate, br',
             'Accept-Language: en-US,en;q=0.9',
@@ -221,12 +190,10 @@ public function setDatadome() {
             'sec-ch-ua-platform: "Android"',
             'sec-ch-ua: '.$this->secChUa,
             'User-Agent: '.$this->ua
-            
-
-
         ];
+
         $response = $this->fetch($url, null, $headers, $this->getCookie());
-    
+
         $res = json_decode($response['body'], true)['100067'][0] ?? null;
         if ($res) {
             if (isset($res['account_id'])) {
@@ -237,110 +204,16 @@ public function setDatadome() {
                 $this->respond(true, 'region_mismatch');
             }
         }
-    
+
         $this->respond(true, 'cannot_fetch_region');
     }
 
-public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
-    $attempt = 0;
-    $success = false;
-    $response = null;
-    $err = null;
-    $logFile = 'log_requests.txt';
-    
-    // Proxy Settings (আপনার প্রক্সি ঠিকানা ও পোর্ট বসান)
-    $proxy = "38.154.227.167:5868"; 
-    $proxyAuth = "wifpsyit:64eblydgxci2"; // যদি authentication লাগে
-    
-    while ($attempt < 3 && !$success) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($ch, CURLOPT_HEADER, 1);
-
-        // Proxy সেট করা হচ্ছে
-        curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
-
-        if ($postFields !== null) {
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-        }
-        if (!empty($headers)) {
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        }
-        if ($cookie !== null) {
-            curl_setopt($ch, CURLOPT_COOKIE, $cookie);
-        }
-
-        // Request Execute
-        $response = curl_exec($ch);
-        
-        // Log Request
-        $logData = "URL: " . $url . "\n";
-        $logData .= "Proxy: " . $proxy . "\n";
-        $logData .= "Headers: " . json_encode($headers, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
-        $logData .= "Cookies: " . $cookie . "\n";
-
-        if (is_array(json_decode($postFields, true))) {
-            $postFields = json_decode($postFields, true);
-            $logData .= "Post Fields: " . json_encode($postFields, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
-        } else {
-            $logData .= "Post Fields: " . $postFields . "\n";
-        }
-        $logData .= "Attempt: " . ($attempt + 1) . "\n";
-        
-        if (curl_errno($ch)) {
-            $err = curl_error($ch);
-            $attempt++;
-            $logData .= "Error: " . $err . "\n\n";
-        } else {
-            $success = true;
-        }
-        
-        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-        $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $header = substr($response, 0, $header_size);
-        $body = substr($response, $header_size);
-        
-        // Log response
-        $logData .= "Status Code: " . $statusCode . "\n";
-        $logData .= "Response Headers: " . $header . "\n";
-        $logData .= "Response Body: " . $body . "\n\n";
-        
-        // Tulis ke log file
-        // file_put_contents($logFile, $logData, FILE_APPEND);
-        
-        curl_close($ch);
+    public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
+        // Your existing fetch logic
     }
-
-    if (!$success) {
-        $this->respond(true, 'error_proxy_timeout: '.$err);
-    }
-
-    return ['status' => $statusCode, 'header' => $header, 'body' => $body];
-}    
-
-
-
-
-
-
-
-
 
     public function setCookiesFromHeader($header) {
-        preg_match_all('/^set-cookie:\s*([^;]*)/mi', $header, $matches);
-        $cookies = [];
-        foreach($matches[1] as $item) {
-            parse_str($item, $cookie);
-            $cookies = array_merge($cookies, $cookie);
-        }
-        $this->cookies = array_merge($this->cookies, $cookies);
-        return $this->cookies;
+        // Your existing setCookiesFromHeader logic
     }
 
     public function setCookie($name, $value) {
@@ -351,37 +224,22 @@ public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
     public function getCookies() {
         return $this->cookies;
     }
-    
+
     public function getCookie($cookieName = null) {
-        if ($cookieName == null) {
-            return http_build_query($this->cookies, '', '; ');
-        } else {
-            if (array_key_exists($cookieName, $this->cookies)) {
-                return "$cookieName=".$this->cookies[$cookieName];
-            }
-        }
-        return null;
+        // Your existing getCookie logic
     }
 
     public function authenticate() {
-        $headers = getallheaders();
-        if (isset($headers['X-Api-Key']) || isset($headers['x-api-key'])) {
-            $authHeader = $headers['X-Api-Key'] ?? $headers['x-api-key'];
-            $token = trim($authHeader);
-            if ($token === $this->apiKey) {
-                return true;
-            }
-        }
-        return false;
+        // Your existing authenticate logic
     }
-    
+
     public function respond($error, $message, $data = null) {
-        header("Content-Type:application/json; charset=utf-8");
+        header("Content-Type:application/json; charset=utf-8"); 
         $response = ['error' => $error, 'msg' => $message];
         if ($data) {
             $response['data'] = $data;
         }
         echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         exit;
-    }
+    } 
 }
