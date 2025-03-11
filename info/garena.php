@@ -4,6 +4,7 @@ class Garena {
     public $player;
     public $cookies;
     public $ua;
+    public $secChUa;
 
     public function __construct() {
         require 'settings.php';
@@ -11,13 +12,30 @@ class Garena {
         $this->apiKey = $apiKey;
         $this->player = [];
         $this->cookies = [];
-        $ua = file('user-agents.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-        if (!empty($ua)) {
-            $this->ua = $ua[array_rand($ua)];
+        // User-Agent লোড করা
+        $uaList = file('user-agents.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+        if (!empty($uaList)) {
+            $this->ua = $uaList[array_rand($uaList)];
+            $this->secChUa = $this->generateSecChUa($this->ua);
         }
     }
 
+    private function generateSecChUa($userAgent) {
+        // Chrome ভার্সন বের করা
+        if (preg_match('/Chrome\/(\d+)/', $userAgent, $matches)) {
+            $chromeVersion = $matches[1];
+        } else {
+            $chromeVersion = "124"; // ডিফল্ট Chrome ভার্সন
+        }
+return "\"Not(A:Brand\";v=\"99\", \"Chromium\";v=\"$chromeVersion\", \"Google Chrome\";v=\"$chromeVersion\"";
+
+    }
+
+
+
+    
     public function init() {
         $url = 'https://shop.garena.my/app';
         $headers = [
@@ -40,6 +58,11 @@ class Garena {
         return true;
     }
 
+
+----------------------------------------------------------------------------------------
+
+    
+    
     public function setDatadome() {
         $url = "https://api.apighor.com/datadome-solver/";
         $headers = [
@@ -54,6 +77,10 @@ class Garena {
         return $this->cookies['datadome'];
     }
 
+
+-------------------------------------------------------------------------------------------------------
+    
+
     public function setPlayerId($player_id) {
         $url = 'https://shop.garena.my/api/auth/player_id_login';
         $postData = json_encode([
@@ -64,6 +91,7 @@ class Garena {
         $headers = [
             'Accept: application/json, text/plain, */*',
             'Accept-Encoding: gzip, deflate, br','Accept-Language: en-US,en;q=0.9',
+            'Accept-Language: en-US,en;q=0.9',
             'Cache-Control: no-cache',
             'Connection: keep-alive',
             'Content-Length: ' . strlen($postData),
@@ -99,6 +127,10 @@ class Garena {
         }
     }
 
+
+------------------------------------------------------------------------------------------
+
+    
     public function checkPlayerId($player_id, $session_key) {
         $url = "https://shop.garena.my/api/auth/get_user_info/multi";
         $this->cookies['session_key'] = $session_key;
@@ -127,6 +159,10 @@ class Garena {
         return $this->setPlayerId($player_id);
     }
 
+
+---------------------------------------------------------------------------------
+
+    
     public function regionVerify() {
         $url = "https://shop.garena.my/api/shop/apps/roles?app_id=100067&region=MY&source=pc";
         $headers = [
