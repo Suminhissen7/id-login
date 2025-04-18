@@ -68,7 +68,7 @@ header("Retry-After: 3600"); // 1 hour
         <p>আমাদের ওয়েবসাইট বর্তমানে সংরক্ষণে রয়েছে।  
            আমরা উন্নত সেবা প্রদানের জন্য কাজ করছি।  
            অনুগ্রহ করে একটু পরে আবার চেষ্টা করুন।</p>
-        <footer>&copy; <?php echo date("Y"); ?> আপনার কোম্পানির নাম</footer>
+        <footer>&copy; <?php echo date("Y"); ?> TOBD</footer>
     </div>
 </body>
 </html>
