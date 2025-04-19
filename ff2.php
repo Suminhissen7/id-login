@@ -101,7 +101,7 @@ if ($session_key) {
     }
 
     // Players টেবিলে Insert or Update করা
-    $stmt = $mysqli->prepare("INSERT INTO players (login_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
+    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
     $stmt->bind_param("is", $login_id, $session_key);
 
     if ($stmt->execute()) {
