@@ -1,10 +1,10 @@
 <?php
 
-// 1. Input JSON পড়া
+// Input JSON পড়া
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
-// 2. login_id চেক করা
+// login_id চেক করা
 if (!isset($data['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
@@ -13,7 +13,7 @@ if (!isset($data['login_id'])) {
 
 $login_id = $data['login_id'];
 
-// 3. Garena API-তে Request পাঠানো
+// Garena API তে রিকোয়েস্ট
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -69,13 +69,8 @@ curl_close($curl);
 // Body থেকে JSON ডাটা পড়া
 $response_data = json_decode($body, true);
 
-// open_id আছে কিনা চেক
-$result = [];
-if (isset($response_data['open_id'])) {
-    $result['open_id'] = $response_data['open_id'];
-} else {
-    $result['open_id'] = null;
-}
+// open_id বের করা
+$open_id = $response_data['open_id'] ?? null;
 
 // Header থেকে session_key বের করা
 $session_key = null;
@@ -91,8 +86,10 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
-$result['session_key'] = $session_key;
-
-// ফলাফল ফেরত দেওয়া
+// Final Response ফেরত
 header('Content-Type: application/json');
-echo json_encode($result);
+echo json_encode([
+    'open_id' => $open_id,
+    'session_key' => $session_key,
+    'raw_response' => $response_data, // Main রেসপন্সও দেখাবে এখন
+]);
