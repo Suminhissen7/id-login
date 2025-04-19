@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Input JSON পড়া
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
