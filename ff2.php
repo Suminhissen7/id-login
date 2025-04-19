@@ -92,23 +92,22 @@ foreach ($matches[1] as $cookie) {
 // যদি session_key থাকে তাহলে Database এ save করবো
 if ($session_key) {
     // Database কানেকশন
-    $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
+    $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'TOBD', 'shihab067', 'tobd_api');
 
-    // Connection চেক
     if ($mysqli->connect_error) {
         http_response_code(500);
         echo json_encode(['error' => 'Database connection failed: ' . $mysqli->connect_error]);
         exit;
     }
 
-    // Players টেবিলে Insert করা
-    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?)");
+    // Players টেবিলে Insert or Update করা
+    $stmt = $mysqli->prepare("INSERT INTO players (login_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
     $stmt->bind_param("is", $login_id, $session_key);
 
     if ($stmt->execute()) {
-        $db_status = "Saved successfully";
+        $db_status = "Saved or Updated successfully";
     } else {
-        $db_status = "Database save failed: " . $stmt->error;
+        $db_status = "Database save/update failed: " . $stmt->error;
     }
 
     $stmt->close();
@@ -116,6 +115,7 @@ if ($session_key) {
 } else {
     $db_status = "No session_key found, nothing saved";
 }
+
 
 // Final Response
 header('Content-Type: application/json');
