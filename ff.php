@@ -1,5 +1,19 @@
 <?php
 
+// 1. Input JSON পড়া
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
+
+// 2. login_id চেক করা
+if (!isset($data['login_id'])) {
+    http_response_code(400);
+    echo json_encode(['error' => 'login_id missing']);
+    exit;
+}
+
+$login_id = $data['login_id'];
+
+// 3. Garena API-তে Request পাঠানো
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -14,7 +28,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => json_encode([
         "app_id" => 100067,
-        "login_id" => "7584754202"
+        "login_id" => $login_id
     ]),
     CURLOPT_HTTPHEADER => [
         'Accept: application/json, text/plain, */*',
@@ -40,40 +54,45 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 if ($err) {
-    echo "cURL Error #: " . $err;
+    http_response_code(500);
+    echo json_encode(['error' => $err]);
     curl_close($curl);
     exit;
 }
 
-// রেসপন্স থেকে Header আর Body আলাদা করা
 $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 $header = substr($response, 0, $header_size);
 $body = substr($response, $header_size);
 
 curl_close($curl);
 
-// JSON Body পার্স করা
-$data = json_decode($body, true);
+// Body থেকে JSON ডাটা পড়া
+$response_data = json_decode($body, true);
 
-// ১. open_id আছে কিনা চেক করা
-if (isset($data['open_id'])) {
-    echo "open_id পাওয়া গেছে: " . $data['open_id'] . "\n";
+// open_id আছে কিনা চেক
+$result = [];
+if (isset($response_data['open_id'])) {
+    $result['open_id'] = $response_data['open_id'];
 } else {
-    echo "open_id পাওয়া যায়নি!\n";
+    $result['open_id'] = null;
 }
 
-// ২. Header থেকে session_key বের করা
-$session_key_found = false;
+// Header থেকে session_key বের করা
+$session_key = null;
 preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 
 foreach ($matches[1] as $cookie) {
     if (stripos($cookie, 'session_key=') !== false) {
-        $session_key_found = true;
-        echo "Session Key পাওয়া গেছে কুকিতে: " . $cookie . "\n";
+        $parts = explode('=', $cookie, 2);
+        if (count($parts) == 2) {
+            $session_key = $parts[1];
+        }
         break;
     }
 }
 
-if (!$session_key_found) {
-    echo "Session Key কুকিতে পাওয়া যায়নি!\n";
-}
+$result['session_key'] = $session_key;
+
+// ফলাফল ফেরত দেওয়া
+header('Content-Type: application/json');
+echo json_encode($result);
