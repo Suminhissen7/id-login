@@ -53,7 +53,7 @@ $body = substr($response, $header_size);
 
 curl_close($curl);
 
-// Step 3: Parse Response
+// Step 3: Parse Garena Response
 $body_json = json_decode($body, true);
 $open_id = $body_json['open_id'] ?? null;
 
@@ -61,8 +61,11 @@ $open_id = $body_json['open_id'] ?? null;
 preg_match('/session_key=([^;]+)/', $header, $matches);
 $session_key = $matches[1] ?? null;
 
-// Step 4: Save to Database if open_id and session_key exist
+// Step 4: Decision
 if ($open_id && $session_key) {
+    // Open_id এবং Session key পাওয়া গেছে
+
+    // Database Connect
     $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
 
     if ($mysqli->connect_error) {
@@ -71,7 +74,7 @@ if ($open_id && $session_key) {
         exit;
     }
 
-    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
+    $stmt = $mysqli->prepare("INSERT INTO players (login_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
     $stmt->bind_param("is", $login_id, $session_key);
 
     if (!$stmt->execute()) {
@@ -83,7 +86,7 @@ if ($open_id && $session_key) {
     $stmt->close();
     $mysqli->close();
     
-    // Step 5: Now call towMIA API with login_id
+    // Now call Towmia API
     $towmia_url = "https://towmia.me/ff/?id=" . urlencode($login_id);
     
     $towmia_curl = curl_init();
@@ -103,10 +106,11 @@ if ($open_id && $session_key) {
 
     curl_close($towmia_curl);
 
-    // Step 6: Final response show only towmia response
+    // Show only Towmia response
     echo $towmia_response;
 
 } else {
-    http_response_code(400);
-    echo json_encode(['error' => 'open_id or session_key missing from Garena response']);
+    // open_id বা session_key না পাওয়া গেলে Garena API response দেখাবে
+    http_response_code(200);
+    echo $body; // পুরা Garena body রেসপন্স দেখাবে
 }
