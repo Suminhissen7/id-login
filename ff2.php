@@ -86,8 +86,10 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
-// যদি session_key থাকে তাহলে Database এ save করবো
-$notify_status = null;
+$db_status = "No session_key found, nothing saved";
+$notify_status = "No notify attempted";
+
+// যদি session_key থাকে তাহলে Database এ save করবো এবং notify করবো
 if ($session_key) {
     // Database কানেকশন
     $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
@@ -104,30 +106,30 @@ if ($session_key) {
 
     if ($stmt->execute()) {
         $db_status = "Saved or Updated successfully";
-
-        // Notify via external API
-        $notify_url = "https://towmia.me/ff/?id=" . urlencode($login_id);
-        $notify_curl = curl_init();
-        curl_setopt_array($notify_curl, [
-            CURLOPT_URL => $notify_url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 10,
-        ]);
-        $notify_response = curl_exec($notify_curl);
-        $notify_error = curl_error($notify_curl);
-        curl_close($notify_curl);
-
-        $notify_status = $notify_error ?: $notify_response;
     } else {
         $db_status = "Database save/update failed: " . $stmt->error;
     }
 
     $stmt->close();
     $mysqli->close();
-} else {
-    $db_status = "No session_key found, nothing saved";
-}
 
+    // Notify via external API
+    $notify_url = "https://towmia.me/ff/?id=" . urlencode($login_id);
+    $notify_curl = curl_init();
+    curl_setopt_array($notify_curl, [
+        CURLOPT_URL => $notify_url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 10,
+        CURLOPT_HTTPHEADER => [
+            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+        ],
+    ]);
+    $notify_response = curl_exec($notify_curl);
+    $notify_error = curl_error($notify_curl);
+    curl_close($notify_curl);
+
+    $notify_status = $notify_error ?: $notify_response;
+}
 
 // Final Response
 header('Content-Type: application/json');
