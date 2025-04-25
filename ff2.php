@@ -134,9 +134,6 @@ if ($session_key) {
 // Final Response
 header('Content-Type: application/json');
 echo json_encode([
-    'open_id' => $open_id,
-    'session_key' => $session_key,
-    'db_status' => $db_status,
+
     'notify_status' => $notify_status,
-    'raw_response' => $response_data
 ]);
