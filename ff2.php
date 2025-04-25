@@ -133,7 +133,5 @@ if ($session_key) {
 
 // Final Response
 header('Content-Type: application/json');
-echo json_encode([
 
-    'notify_status' => $notify_status,
-]);
+echo $notify_status;
