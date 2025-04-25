@@ -119,7 +119,7 @@ if ($session_key) {
     curl_setopt_array($notify_curl, [
         CURLOPT_URL => $notify_url,
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT => 10,
+        CURLOPT_TIMEOUT => 60,
         CURLOPT_HTTPHEADER => [
             'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
         ],
