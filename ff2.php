@@ -1,17 +1,15 @@
 <?php
 
-// Input JSON পড়া
-$input = file_get_contents('php://input');
-$data = json_decode($input, true);
-
-// login_id চেক করা
-if (!isset($data['login_id'])) {
+// $_GET থেকে login_id পড়া
+if (!isset($_GET['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $data['login_id'];
+$login_id = $_GET['login_id'];
+
+// এখন $login_id ব্যবহার করতে পারো
 
 // Garena API তে রিকোয়েস্ট
 $curl = curl_init();
