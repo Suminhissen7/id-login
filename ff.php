@@ -2,7 +2,7 @@
 
 // Sequential limiter (3 seconds gap)
 $timestamp_file = 'request_lock.txt';
-$limit_seconds = 3;
+$limit_seconds = 6;
 
 $fp = fopen($timestamp_file, 'c+');
 if ($fp && flock($fp, LOCK_EX)) {
