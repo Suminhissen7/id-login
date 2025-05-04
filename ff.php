@@ -1,25 +1,42 @@
 <?php
 
-// Input JSON পড়া
-$input = file_get_contents('php://input');
-$data = json_decode($input, true);
+// Sequential limiter (3 seconds gap)
+$timestamp_file = 'request_lock.txt';
+$limit_seconds = 3;
 
-// login_id চেক করা
-if (!isset($data['login_id'])) {
+$fp = fopen($timestamp_file, 'c+');
+if ($fp && flock($fp, LOCK_EX)) {
+    $last_time = floatval(trim(stream_get_contents($fp)));
+    $now = microtime(true);
+    $diff = $now - $last_time;
+
+    if ($diff < $limit_seconds) {
+        usleep(($limit_seconds - $diff) * 1000000);
+    }
+
+    ftruncate($fp, 0);
+    rewind($fp);
+    fwrite($fp, $now);
+    fflush($fp);
+    flock($fp, LOCK_UN);
+}
+fclose($fp);
+
+// login_id check
+if (!isset($_GET['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $data['login_id'];
+$login_id = $_GET['login_id'];
 
-// Garena API তে রিকোয়েস্ট
+// Garena API request
 $curl = curl_init();
-
 curl_setopt_array($curl, [
     CURLOPT_URL => 'https://shop.garena.my/api/auth/player_id_login',
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HEADER => true, // Header সহ রেসপন্স নিতে
+    CURLOPT_HEADER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 30,
@@ -66,16 +83,13 @@ $body = substr($response, $header_size);
 
 curl_close($curl);
 
-// Body থেকে JSON ডাটা পড়া
+// Parse body
 $response_data = json_decode($body, true);
-
-// open_id বের করা
 $open_id = $response_data['open_id'] ?? null;
 
-// Header থেকে session_key বের করা
+// Parse session_key from header
 $session_key = null;
 preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
-
 foreach ($matches[1] as $cookie) {
     if (stripos($cookie, 'session_key=') !== false) {
         $parts = explode('=', $cookie, 2);
@@ -86,10 +100,45 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
-// Final Response ফেরত
+$db_status = "No session_key found, nothing saved";
+$notify_status = "No notify attempted";
+
+// Save to DB if session_key found
+if ($session_key) {
+    $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
+    if ($mysqli->connect_error) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Database connection failed: ' . $mysqli->connect_error]);
+        exit;
+    }
+
+    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
+    $stmt->bind_param("is", $login_id, $session_key);
+    if ($stmt->execute()) {
+        $db_status = "Saved or Updated successfully";
+    } else {
+        $db_status = "Database save/update failed: " . $stmt->error;
+    }
+    $stmt->close();
+    $mysqli->close();
+
+    // Notify external API
+    $notify_url = "https://sf.tobd.top/ff/?id=" . urlencode($login_id);
+    $notify_curl = curl_init();
+    curl_setopt_array($notify_curl, [
+        CURLOPT_URL => $notify_url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 60,
+        CURLOPT_HTTPHEADER => [
+            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+        ],
+    ]);
+    $notify_response = curl_exec($notify_curl);
+    $notify_error = curl_error($notify_curl);
+    curl_close($notify_curl);
+    $notify_status = $notify_error ?: $notify_response;
+}
+
+// Final response
 header('Content-Type: application/json');
-echo json_encode([
-    'open_id' => $open_id,
-    'session_key' => $session_key,
-    'raw_response' => $response_data, // Main রেসপন্সও দেখাবে এখন
-]);
+echo $notify_status;
