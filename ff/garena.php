@@ -221,8 +221,8 @@ public function fetch($url, $postFields = null, $headers = [], $cookie = null) {
     $logFile = 'log_requests.txt';
 
     // ✅ Proxy Details (এখানে সরাসরি সেট করা)
-    $proxy_ip = '38.153.152.244';   // Proxy IP
-    $proxy_port = '9594';         // Proxy Port
+    $proxy_ip = '198.23.239.134';   // Proxy IP
+    $proxy_port = '6540';         // Proxy Port
     $proxy_user = 'wifpsyit';      // Proxy Username (যদি লাগে)
     $proxy_pass = '64eblydgxci2';      // Proxy Password (যদি লাগে)
 
