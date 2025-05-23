@@ -3,8 +3,8 @@
 $host = 'mysql-tobd.alwaysdata.net';
 $db   = 'tobd_api';
 $user = 'tobd';
-$pass = 'shihab067';  // 🔁 এখানে আপনার পাসওয়ার্ড দিন
-$table = 'orders';         // 🔁 এখানে আপনার টেবিলের নাম দিন
+$pass = 'shihab067';
+$table = 'orders';
 
 header('Content-Type: application/json');
 
@@ -29,18 +29,19 @@ if (!isset($input['order_no'])) {
 $order_no = $conn->real_escape_string($input['order_no']);
 
 // Query the database
-$sql = "SELECT player_id, products, datetime, username, status FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
+$sql = "SELECT id, player_id, products, datetime, username, status FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $data = $result->fetch_assoc();
     echo json_encode([
-        'dada' => [
-            'player_id' => $data['player_id'],
-            'products'  => $data['products'],
-            'datetime'  => $data['datetime'],
-            'username'  => $data['username'],
-            'status'    => $data['status']
+        'data' => [
+            'id'         => $data['id'],
+            'Uid'        => $data['player_id'],
+            'name'       => $data['username'],
+            'Product'    => $data['products'],
+            'Date Time'  => $data['datetime'],
+            'Status'     => $data['status']
         ]
     ]);
 } else {
