@@ -29,16 +29,19 @@ if (!isset($input['order_no'])) {
 $order_no = $conn->real_escape_string($input['order_no']);
 
 // Query the database
-$sql = "SELECT player_id, products, datetime, username FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
+$sql = "SELECT player_id, products, datetime, username, status FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $data = $result->fetch_assoc();
     echo json_encode([
-        'player_id' => $data['player_id'],
-        'products'  => $data['products'],
-        'datetime'  => $data['datetime'],
-        'username'  => $data['username']
+        'dada' => [
+            'player_id' => $data['player_id'],
+            'products'  => $data['products'],
+            'datetime'  => $data['datetime'],
+            'username'  => $data['username'],
+            'status'    => $data['status']
+        ]
     ]);
 } else {
     echo json_encode(['error' => 'Order খুঁজে পাওয়া যায়নি']);
