@@ -29,14 +29,14 @@ if (!isset($input['order_no'])) {
 $order_no = $conn->real_escape_string($input['order_no']);
 
 // Query the database
-$sql = "SELECT id, player_id, products, datetime, username, status FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
+$sql = "SELECT order_no, player_id, products, datetime, username, status FROM `$table` WHERE order_no = '$order_no' LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $data = $result->fetch_assoc();
     echo json_encode([
         'data' => [
-            'id'         => $data['id'],
+            'id'         => $data['order_no'],
             'Uid'        => $data['player_id'],
             'name'       => $data['username'],
             'Product'    => $data['products'],
