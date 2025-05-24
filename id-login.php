@@ -2,7 +2,7 @@
 
 if (!isset($_GET['login_id'])) {
     http_response_code(400);
-    echo json_encode(['status' => 'login_id_missing', 'original_response' => null]);
+    echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
@@ -49,7 +49,7 @@ $err = curl_error($curl);
 
 if ($err) {
     http_response_code(500);
-    echo json_encode(['status' => 'curl_error', 'error' => $err, 'original_response' => null]);
+    echo json_encode(['error' => $err]);
     curl_close($curl);
     exit;
 }
@@ -61,18 +61,20 @@ curl_close($curl);
 
 $response_data = json_decode($body, true);
 
+// region check
 if (!isset($response_data['region'])) {
-    echo json_encode(['status' => 'invalid_id', 'original_response' => $response_data]);
+    echo json_encode(['status' => 'invalid_id']);
     exit;
 }
 
 $region = strtoupper($response_data['region']);
 
 if ($region !== 'BD') {
-    echo json_encode(['status' => 'region_not_bd', 'original_response' => $response_data]);
+    echo json_encode(['status' => 'region_not_bd']);
     exit;
 }
 
+// session_key extract from header
 $session_key = null;
 preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 foreach ($matches[1] as $cookie) {
@@ -85,11 +87,13 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
+// যদি session_key না পাওয়া যায়
 if (!$session_key) {
-    echo json_encode(['status' => 'no_session_key', 'original_response' => $response_data]);
+    echo json_encode(['status' => 'no_session_key']);
     exit;
 }
 
+// session_key থাকলে DB-তে save করি
 $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
 
 if (!$mysqli->connect_error) {
@@ -103,10 +107,10 @@ if (!$mysqli->connect_error) {
     $mysqli->close();
 }
 
+// সফল রেসপন্স
 echo json_encode([
     'status' => 'success',
     'nickname' => $response_data['nickname'] ?? '',
     'open_id' => $response_data['open_id'] ?? '',
-    'img_url' => $response_data['img_url'] ?? '',
-    'original_response' => $response_data
+    'img_url' => $response_data['img_url'] ?? ''
 ]);
