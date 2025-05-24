@@ -1,15 +1,13 @@
 <?php
 
-// $_GET থেকে login_id পড়া
-if (!isset($_GET['uid'])) {
+if (!isset($_GET['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $_GET['uid'];
+$login_id = $_GET['login_id'];
 
-// Garena API তে রিকোয়েস্ট
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -33,8 +31,15 @@ curl_setopt_array($curl, [
         'Connection: keep-alive',
         'Content-Type: application/json',
         'Origin: https://shop.garena.my',
+        'Pragma: no-cache',
         'Referer: https://shop.garena.my/?app=100067&item=100712&channel=202278',
-        'User-Agent: Mozilla/5.0',
+        'Sec-Fetch-Dest: empty',
+        'Sec-Fetch-Mode: cors',
+        'Sec-Fetch-Site: same-origin',
+        'User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+        'sec-ch-ua: "Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile: ?1',
+        'sec-ch-ua-platform: "Android"',
     ],
 ]);
 
@@ -51,38 +56,25 @@ if ($err) {
 $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 $header = substr($response, 0, $header_size);
 $body = substr($response, $header_size);
-
 curl_close($curl);
 
-// Body থেকে JSON ডাটা পড়া
 $response_data = json_decode($body, true);
 
-if (isset($response_data['error'])) {
-    // invalid_id বা অন্য কোনো error
-    http_response_code(400);
-    echo json_encode([
-        'status' => 'error',
-        'message' => 'Invalid login_id',
-        'details' => $response_data['error']
-    ]);
+// region check
+if (!isset($response_data['region'])) {
+    echo json_encode(['status' => 'invalid_id']);
     exit;
 }
 
-if (!isset($response_data['region']) || $response_data['region'] !== 'BD') {
-    http_response_code(403);
-    echo json_encode([
-        'status' => 'error',
-        'message' => 'Region is not BD',
-        'region' => $response_data['region'] ?? 'unknown'
-    ]);
+$region = strtoupper($response_data['region']);
+
+if ($region !== 'BD') {
+    echo json_encode(['status' => 'region_not_bd']);
     exit;
 }
 
-// সব ঠিক থাকলে বাকি প্রসেসিং করবেন
-$open_id = $response_data['open_id'] ?? null;
+// session_key extract from header
 $session_key = null;
-
-// session_key extraction as before...
 preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 foreach ($matches[1] as $cookie) {
     if (stripos($cookie, 'session_key=') !== false) {
@@ -94,40 +86,30 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
-// তারপর বাকি ডাটাবেজে সেভ ইত্যাদি
+// যদি session_key না পাওয়া যায়
+if (!$session_key) {
+    echo json_encode(['status' => 'no_session_key']);
+    exit;
+}
 
-$db_status = "No session_key found";
+// session_key থাকলে DB-তে save করি
+$mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
 
-// যদি session_key থাকে তাহলে Database এ save করবো
-if ($session_key) {
-    // Database কানেকশন
-    $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
-
-    if ($mysqli->connect_error) {
-        http_response_code(500);
-        echo json_encode(['error' => 'Database connection failed: ' . $mysqli->connect_error]);
-        exit;
-    }
-
-    // Players টেবিলে Insert or Update করা
-    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
-    $stmt->bind_param("is", $login_id, $session_key);
-
-    if ($stmt->execute()) {
-        $db_status = "successfully";
-    } else {
-        $db_status = "Database save/update failed: " . $stmt->error;
-    }
-
+if (!$mysqli->connect_error) {
+    $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key, nickname, open_id, img_url) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), nickname = VALUES(nickname), open_id = VALUES(open_id), img_url = VALUES(img_url), updated_at = CURRENT_TIMESTAMP");
+    $nickname = $response_data['nickname'] ?? '';
+    $open_id = $response_data['open_id'] ?? '';
+    $img_url = $response_data['img_url'] ?? '';
+    $stmt->bind_param("issss", $login_id, $session_key, $nickname, $open_id, $img_url);
+    $stmt->execute();
     $stmt->close();
     $mysqli->close();
 }
 
-// Final Response
-header('Content-Type: application/json');
+// সফল রেসপন্স
 echo json_encode([
-    'status' => $db_status,
-    'region' => $region,
-    'open_id' => $open_id,
-    'nickname' => $nickname
+    'status' => 'success',
+    'nickname' => $response_data['nickname'] ?? '',
+    'open_id' => $response_data['open_id'] ?? '',
+    'img_url' => $response_data['img_url'] ?? ''
 ]);
