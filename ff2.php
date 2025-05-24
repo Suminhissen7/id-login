@@ -85,7 +85,11 @@ foreach ($matches[1] as $cookie) {
 }
 
 $db_status = "No session_key found, nothing saved";
-$notify_status = "No notify attempted";
+$notify_status = json_encode([
+    "error" => true,
+    "msg" => "invalid_uid"
+]);
+
 
 // যদি session_key থাকে তাহলে Database এ save করবো এবং notify করবো
 if ($session_key) {
