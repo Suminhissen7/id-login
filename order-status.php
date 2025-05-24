@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
         ]
     ]);
 } else {
-    echo json_encode(['error' => 'Order খুঁজে পাওয়া যায়নি']);
+    echo json_encode(['text' => 'Order খুঁজে পাওয়া যায়নি']);
 }
 
 $conn->close();
