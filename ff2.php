@@ -1,13 +1,18 @@
 <?php
 
 // $_GET থেকে login_id পড়া
-if (!isset($_GET['login_id'])) {
+// Raw POST data পড়া
+$inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, true);
+
+if (!isset($input['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $_GET['login_id'];
+$login_id = $input['login_id'];
+
 
 // এখন $login_id ব্যবহার করতে পারো
 
