@@ -1,12 +1,12 @@
 <?php
 
-if (!isset($_GET['login_id'])) {
+if (!isset($_GET['uid'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $_GET['login_id'];
+$login_id = $_GET['uid'];
 
 $curl = curl_init();
 
