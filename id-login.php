@@ -30,6 +30,7 @@ curl_setopt_array($curl, [
         'Cache-Control: no-cache',
         'Connection: keep-alive',
         'Content-Type: application/json',
+        'Cookie: region=MY; mspid2=1c2373c9661dffbc747b841fa22e9af8; language=en; _ga=GA1.1.1051086503.1742954649; source=mb; datadome=03dZTkdI4~zMISDX0hm9wpgq8nDwLFZmvebIl15X7bPnexVKaXGjqLyLccmby7QP6tJoKM29zwhJLuG7qYc6_GyU4ZxxYjInSOd5q~6KVbykT4LGVceB5YyIyKUr2gRJ; session_key=wjh9ahie6snagyxnfw7ohbjs32uvuvv6; _ga_9F1KGGRJHY=GS1.1.1745094802.71.1.1745094844.0.0.0',
         'Origin: https://shop.garena.my',
         'Pragma: no-cache',
         'Referer: https://shop.garena.my/?app=100067&item=100712&channel=202278',
