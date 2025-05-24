@@ -35,13 +35,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $data = $result->fetch_assoc();
 
-    $text = "🧾 Order Information 🧾\n";
-    $text .= "🆔 Order No: {$data['order_no']}\n";
-    $text .= "👤 UID: {$data['player_id']}\n";
-    $text .= "👨‍💻 Name: " . ($data['username'] ?? 'N/A') . "\n";
-    $text .= "📦 Product: " . ($data['products'] ?? 'N/A') . "\n";
-    $text .= "⏰ Date/Time: {$data['datetime']}\n";
-    $text .= "📌 Status: {$data['status']}";
+    
+    $text .= "✥➳ ID: {$data['order_no']}\n";
+    $text .= "✥➳ UID: {$data['player_id']}\n";
+    $text .= "✥➳ Name: " . ($data['username'] ?? 'N/A') . "\n";
+    $text .= "✥➳ Product: " . ($data['products'] ?? 'N/A') . "\n";
+    $text .= "✥➳ Date/Time: {$data['datetime']}\n";
+    $text .= "✥➳ Status: {$data['status']}";
 
     echo json_encode([
         'text' => $text,
@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
         ]
     ]);
 } else {
-    echo json_encode(['text' => 'Order খুঁজে পাওয়া যায়নি']);
+    echo json_encode(['text' => '🥺 Order id not Found 🥺']);
 }
 
 $conn->close();
