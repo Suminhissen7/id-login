@@ -57,29 +57,33 @@ curl_close($curl);
 // Body থেকে JSON ডাটা পড়া
 $response_data = json_decode($body, true);
 
-// যদি error থাকে (invalid_id)
-if (isset($response_data['error']) && $response_data['error'] === 'invalid_id') {
-    http_response_code(404);
-    echo json_encode(['error' => 'Invalid ID']);
+if (isset($response_data['error'])) {
+    // invalid_id বা অন্য কোনো error
+    http_response_code(400);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Invalid login_id',
+        'details' => $response_data['error']
+    ]);
     exit;
 }
 
-// Region, nickname, open_id বের করা
-$region = $response_data['region'] ?? null;
-$nickname = $response_data['nickname'] ?? null;
-$open_id = $response_data['open_id'] ?? null;
-
-// শুধু BD region হলে proceed করবে
-if ($region !== 'BD') {
+if (!isset($response_data['region']) || $response_data['region'] !== 'BD') {
     http_response_code(403);
-    echo json_encode(['error' => 'Region is not BD']);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Region is not BD',
+        'region' => $response_data['region'] ?? 'unknown'
+    ]);
     exit;
 }
 
-// Header থেকে session_key বের করা
+// সব ঠিক থাকলে বাকি প্রসেসিং করবেন
+$open_id = $response_data['open_id'] ?? null;
 $session_key = null;
-preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 
+// session_key extraction as before...
+preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 foreach ($matches[1] as $cookie) {
     if (stripos($cookie, 'session_key=') !== false) {
         $parts = explode('=', $cookie, 2);
@@ -89,6 +93,8 @@ foreach ($matches[1] as $cookie) {
         break;
     }
 }
+
+// তারপর বাকি ডাটাবেজে সেভ ইত্যাদি
 
 $db_status = "No session_key found";
 
