@@ -1,6 +1,6 @@
 <?php
 $running = 0;
-$max = 200; // কতগুলো চেষ্টা করবে
+$max = 50; // কতগুলো চেষ্টা করবে
 $outputFile = "run.txt";
 
 for ($i = 0; $i < $max; $i++) {
