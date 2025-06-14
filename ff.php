@@ -1,37 +1,60 @@
 <?php
 
-// Sequential limiter (3 seconds gap)
-$timestamp_file = 'request_lock.txt';
-$limit_seconds = 6;
+$inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, true);
 
-$fp = fopen($timestamp_file, 'c+');
-if ($fp && flock($fp, LOCK_EX)) {
-    $last_time = floatval(trim(stream_get_contents($fp)));
-    $now = microtime(true);
-    $diff = $now - $last_time;
-
-    if ($diff < $limit_seconds) {
-        usleep(($limit_seconds - $diff) * 1000000);
-    }
-
-    ftruncate($fp, 0);
-    rewind($fp);
-    fwrite($fp, $now);
-    fflush($fp);
-    flock($fp, LOCK_UN);
-}
-fclose($fp);
-
-// login_id check
-if (!isset($_GET['login_id'])) {
+if (!isset($input['login_id'])) {
     http_response_code(400);
     echo json_encode(['error' => 'login_id missing']);
     exit;
 }
 
-$login_id = $_GET['login_id'];
+$login_id = $input['login_id'];
+$db_found = false;
 
-// Garena API request
+// Database কানেকশন
+$mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
+if ($mysqli->connect_error) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Database connection failed: ' . $mysqli->connect_error]);
+    exit;
+}
+
+// Check if user already exists
+$stmt = $mysqli->prepare("SELECT session_key FROM players WHERE user_id = ?");
+$stmt->bind_param("i", $login_id);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows > 0) {
+    $stmt->bind_result($session_key);
+    $stmt->fetch();
+    $db_found = true;
+
+    $notify_url = "https://id.tobd.top/ff/?id=" . urlencode($login_id);
+    $notify_curl = curl_init();
+    curl_setopt_array($notify_curl, [
+        CURLOPT_URL => $notify_url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 60,
+        CURLOPT_HTTPHEADER => [
+            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+        ],
+    ]);
+    $notify_response = curl_exec($notify_curl);
+    $notify_error = curl_error($notify_curl);
+    curl_close($notify_curl);
+
+    $stmt->close();
+    $mysqli->close();
+
+    header('Content-Type: application/json');
+    echo $notify_error ?: $notify_response;
+    exit;
+}
+$stmt->close(); // player not found, so close this
+
+// Garena API call
 $curl = curl_init();
 curl_setopt_array($curl, [
     CURLOPT_URL => 'https://shop.garena.my/api/auth/player_id_login',
@@ -80,14 +103,11 @@ if ($err) {
 $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 $header = substr($response, 0, $header_size);
 $body = substr($response, $header_size);
-
 curl_close($curl);
 
-// Parse body
 $response_data = json_decode($body, true);
 $open_id = $response_data['open_id'] ?? null;
 
-// Parse session_key from header
 $session_key = null;
 preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $header, $matches);
 foreach ($matches[1] as $cookie) {
@@ -100,45 +120,28 @@ foreach ($matches[1] as $cookie) {
     }
 }
 
-$db_status = "No session_key found, nothing saved";
-$notify_status = "No notify attempted";
-
-// Save to DB if session_key found
 if ($session_key) {
-    $mysqli = new mysqli('mysql-tobd.alwaysdata.net', 'tobd', 'shihab067', 'tobd_api');
-    if ($mysqli->connect_error) {
-        http_response_code(500);
-        echo json_encode(['error' => 'Database connection failed: ' . $mysqli->connect_error]);
-        exit;
-    }
-
     $stmt = $mysqli->prepare("INSERT INTO players (user_id, session_key) VALUES (?, ?) ON DUPLICATE KEY UPDATE session_key = VALUES(session_key), updated_at = CURRENT_TIMESTAMP");
     $stmt->bind_param("is", $login_id, $session_key);
-    if ($stmt->execute()) {
-        $db_status = "Saved or Updated successfully";
-    } else {
-        $db_status = "Database save/update failed: " . $stmt->error;
-    }
+    $stmt->execute();
     $stmt->close();
-    $mysqli->close();
-
-    // Notify external API
-    $notify_url = "https://sf.tobd.top/ff/?id=" . urlencode($login_id);
-    $notify_curl = curl_init();
-    curl_setopt_array($notify_curl, [
-        CURLOPT_URL => $notify_url,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT => 60,
-        CURLOPT_HTTPHEADER => [
-            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
-        ],
-    ]);
-    $notify_response = curl_exec($notify_curl);
-    $notify_error = curl_error($notify_curl);
-    curl_close($notify_curl);
-    $notify_status = $notify_error ?: $notify_response;
 }
+$mysqli->close();
 
-// Final response
+// Notify after Garena API call
+$notify_url = "https://id.tobd.top/ff/?id=" . urlencode($login_id);
+$notify_curl = curl_init();
+curl_setopt_array($notify_curl, [
+    CURLOPT_URL => $notify_url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 60,
+    CURLOPT_HTTPHEADER => [
+        'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+    ],
+]);
+$notify_response = curl_exec($notify_curl);
+$notify_error = curl_error($notify_curl);
+curl_close($notify_curl);
+
 header('Content-Type: application/json');
-echo $notify_status;
+echo $notify_error ?: $notify_response;
