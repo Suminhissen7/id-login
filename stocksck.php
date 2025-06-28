@@ -27,16 +27,18 @@ if (isset($data->pid) && !empty($data->pid)) {
     // SQL ইনজেকশন থেকে সুরক্ষিত থাকার জন্য pid স্যানিটাইজ করা হচ্ছে
     $pid = $conn->real_escape_string($data->pid);
 
-    // SQL কোয়েরি তৈরি করা হচ্ছে
-    // LIMIT 1 ব্যবহার করা হয়েছে যাতে শুধুমাত্র প্রথম ম্যাচটি নিয়ে আসা হয়
-    $sql = "SELECT `type` FROM `vouchers` WHERE `pid` = ? LIMIT 1";
+    // --- কোয়েরি আপডেট করা হয়েছে ---
+    // একটি কোয়েরি দিয়েই 'type' এবং মোট সংখ্যা (count) বের করা হচ্ছে
+    $sql = "SELECT 
+                (SELECT `type` FROM `vouchers` WHERE `pid` = ? LIMIT 1) AS `type`, 
+                (SELECT COUNT(*) FROM `vouchers` WHERE `pid` = ?) AS `available_count`";
 
     // Prepared Statement তৈরি করা হচ্ছে
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
-        // pid ভ্যালু বাইন্ড করা হচ্ছে
-        $stmt->bind_param("s", $pid);
+        // pid ভ্যালু দুইবার বাইন্ড করা হচ্ছে (যেহেতু কোয়েরিতে দুটি ? আছে)
+        $stmt->bind_param("ss", $pid, $pid);
 
         // স্টেটমেন্ট এক্সিকিউট করা হচ্ছে
         $stmt->execute();
@@ -45,13 +47,29 @@ if (isset($data->pid) && !empty($data->pid)) {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            // যদি pid পাওয়া যায়, তাহলে 'type' ভ্যালু আউটপুট দেওয়া হচ্ছে
             $row = $result->fetch_assoc();
             $voucher_type = $row['type'];
-            echo json_encode(["status" => "success", "pid" => $pid, "type" => $voucher_type]);
+            $available_count = $row['available_count'];
+
+            // যদি pid অন্তত একবারও পাওয়া যায় (available_count > 0)
+            if ($available_count > 0) {
+                // 'type' এবং মোট সংখ্যা আউটপুট দেওয়া হচ্ছে
+                echo json_encode([
+                    "status" => "success",
+                    "pid" => $pid,
+                    "type" => $voucher_type,
+                    "available_count" => (int)$available_count // সংখ্যাটিকে integer হিসেবে পাঠানো হচ্ছে
+                ]);
+            } else {
+                // যদি pid খুঁজে পাওয়া না যায়
+                echo json_encode([
+                    "status" => "not_found", 
+                    "message" => "আপনার দেওয়া PID (" . $pid . ") খুঁজে পাওয়া যায়নি।"
+                ]);
+            }
         } else {
-            // যদি pid খুঁজে পাওয়া না যায়
-            echo json_encode(["status" => "not_found", "message" => "আপনার দেওয়া PID (" . $pid . ") খুঁজে পাওয়া যায়নি।"]);
+             // যদি কোয়েরি কোনো ফলাফল না দেয় (সাধারণত এটি ঘটবে না)
+             echo json_encode(["status" => "error", "message" => "কোয়েরি কোনো ফলাফল দেয়নি।"]);
         }
 
         // স্টেটমেন্ট বন্ধ করা হচ্ছে
@@ -68,5 +86,4 @@ if (isset($data->pid) && !empty($data->pid)) {
 
 // ডাটাবেস কানেকশন বন্ধ করা হচ্ছে
 $conn->close();
-
 ?>
