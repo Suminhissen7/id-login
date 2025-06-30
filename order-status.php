@@ -36,12 +36,13 @@ if ($result->num_rows > 0) {
     $data = $result->fetch_assoc();
 
     
+    $text .= "✥➳ Your Order Is: {$data['status']}\n";
     $text .= "✥➳ ID: {$data['order_no']}\n";
     $text .= "✥➳ UID: {$data['player_id']}\n";
     $text .= "✥➳ Name: " . ($data['username'] ?? 'N/A') . "\n";
     $text .= "✥➳ Product: " . ($data['products'] ?? 'N/A') . "\n";
-    $text .= "✥➳ Date/Time: {$data['datetime']}\n";
-    $text .= "✥➳ Status: {$data['status']}";
+    $text .= "✥➳ Date/Time: {$data['datetime']}";
+    
 
     echo json_encode([
         'text' => $text,
