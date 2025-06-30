@@ -37,11 +37,6 @@ if (!empty($matches[1]) && !empty($matches[2])) {
         $pid = $pid_map[$raw_pid] ?? null;
 
         if ($pid !== null) {
-            
-            // *** START: সময় মাপার জন্য কোড যোগ করা হয়েছে ***
-            $startTime = microtime(true); // ডেটাবেস অপারেশন শুরুর সময় রেকর্ড
-            // *** END: সময় মাপার কোড ***
-
             foreach ($serials as $index => $serial) {
                 $type = substr($serial, 0, 4);
                 $pin = $pins[$index];
@@ -60,10 +55,6 @@ if (!empty($matches[1]) && !empty($matches[2])) {
                 }
             }
 
-            // *** START: সময় মাপার এবং মেসেজ পাঠানোর কোড পরিবর্তন করা হয়েছে ***
-            $endTime = microtime(true); // ডেটাবেস অপারেশন শেষের সময় রেকর্ড
-            $duration = $endTime - $startTime; // মোট সময় গণনা (সেকেন্ডে)
-
             // Build confirmation message
             $confirmationMessage = "{$successCount} success";
 
@@ -71,12 +62,7 @@ if (!empty($matches[1]) && !empty($matches[2])) {
                 $confirmationMessage .= "\nসেভ হয়নি: " . implode(', ', $failSerials);
             }
 
-            // মেসেজের সাথে মোট সময় যোগ করা
-            $confirmationMessage .= "\n\nসময় লেগেছে: " . number_format($duration, 3) . " সেকেন্ড।";
-            
             sendTelegramMessage($botToken, $chatID, $confirmationMessage);
-            // *** END: পরিবর্তিত কোড ***
-
         } else {
             sendTelegramMessage($botToken, $chatID, "PID ($raw_pid) সঠিক নয় বা ম্যাপ করা যায়নি।");
         }
