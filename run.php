@@ -1,19 +1,22 @@
 <?php
-$running = 0;
-$max = 50; // কতগুলো চেষ্টা করবে
-$outputFile = "run.txt";
+echo "<h3>1. Network Download Speed Test</h3>";
 
-for ($i = 0; $i < $max; $i++) {
-    $pid = exec("sleep 5 > /dev/null & echo $!");
-    if ($pid && is_numeric($pid)) {
-        $running++;
-    } else {
-        break;
-    }
+$fileUrl = 'http://cachefly.cachefly.net/10mb.test'; // 10MB test file
+$fileSizeMB = 10;
+
+// `allow_url_fopen` চালু আছে কিনা তা পরীক্ষা করা হচ্ছে
+if (!ini_get('allow_url_fopen')) {
+    echo "Error: 'allow_url_fopen' is not enabled in your php.ini file.";
+} else {
+    $startTime = microtime(true);
+    file_get_contents($fileUrl);
+    $endTime = microtime(true);
+
+    $duration = $endTime - $startTime;
+    $speedMbps = ($fileSizeMB * 8) / $duration; // Megabytes to Megabits
+
+    echo "Time taken to download 10MB file: " . number_format($duration, 2) . " seconds<br>";
+    echo "Approximate Download Speed: <strong>" . number_format($speedMbps, 2) . " Mbps</strong>";
 }
-
-// রেজাল্ট run.txt ফাইলে লিখে ফেলবে
-file_put_contents($outputFile, "Max exec() processes allowed: $running");
-
-echo "Test completed. Result saved in run.txt\n";
+echo "<hr>";
 ?>
