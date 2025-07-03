@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Tambahkan kondisi ini untuk memastikan bahwa aturan tidak diterapkan untuk file yang sudah ada
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Aturan rewrite untuk mengarahkan permintaan ke index.php dengan parameter id
+    RewriteRule ^top-up$ _top-up.php [L]
+    RewriteRule ^products$ _products.php [L]
+
+    # Handle Error 404 dengan mengarahkan ke index.php
+    ErrorDocument 404 /index.php
+</IfModule>
