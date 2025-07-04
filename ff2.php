@@ -130,7 +130,7 @@ if ($session_key) {
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_TIMEOUT => 60,
         CURLOPT_HTTPHEADER => [
-            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+            'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff5050',
         ],
     ]);
     $notify_response = curl_exec($notify_curl);
