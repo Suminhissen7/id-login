@@ -2,7 +2,7 @@
 
 $authFile = 'auth.txt';
 
-$apiKey = '8fdc3a581fd12d0d6cb8074c8eff6050';
+$apiKey = 'kR9pW2sD8vG4jQ6zH1bN5mC0xL3fT7yUaE9iOsVqgPZtXhY';
 
 // The encryption key must be 32 bits long
 $encKey = '4syp1obQLpjTckDtu9viQN6JKtMkmqpR'; // Don't replace or delete if you find a file with the .txt extension in this app!
