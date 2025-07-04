@@ -136,7 +136,7 @@ curl_setopt_array($notify_curl, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT => 60,
     CURLOPT_HTTPHEADER => [
-        'X-Api-Key: 8fdc3a581fd12d0d6cb8074c8eff6050',
+        'X-Api-Key: kR9pW2sD8vG4jQ6zH1bN5mC0xL3fT7yUaE9iOsVqgPZtXhY',
     ],
 ]);
 $notify_response = curl_exec($notify_curl);
