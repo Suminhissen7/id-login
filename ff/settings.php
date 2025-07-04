@@ -1,6 +1,6 @@
 <?php
 
-$apiKey = 'kR9pW2sD8vG4jQ6zH1bN5mC0xL3fT7yUaE9iOsVqgPZtXhY';
+$apiKey = '8fdc3a581fd12d0d6cb8074c8eff5050';
 
 // DATABASE
 $host = 'mysql-tobd.alwaysdata.net';
