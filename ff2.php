@@ -123,7 +123,7 @@ if ($session_key) {
     sleep(1);
 
     // Notify via external API
-    $notify_url = "https://id.tobd.top/ff/?id=" . urlencode($login_id);
+    $notify_url = "https://tobd.alwaysdata.net/ff/?id=" . urlencode($login_id);
     $notify_curl = curl_init();
     curl_setopt_array($notify_curl, [
         CURLOPT_URL => $notify_url,
