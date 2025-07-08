@@ -136,7 +136,7 @@ class Regulator {
     }
 
 public function setPlayerId($player_id) {
-    $url = "https://id.tobd.top/id-login.php";
+    $url = "https://id.tobd.top/ff2.php";
     $headers = [
         'Content-Type: application/json',
         'X-Api-Key: kR9pW2sD8vG4jQ6zH1bN5mC0xL3fT7yUaE9iOsVqgPZtXhY'
