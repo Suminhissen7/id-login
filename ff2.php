@@ -14,7 +14,7 @@ if (!isset($input['login_id'])) {
 $login_id = $input['login_id'];
 
 
-// এখন $login_id ব্যবহার করতে পারো
+// এখ tumi ki koroন $login_id ব্যবহার করতে পারো
 
 // Garena API তে রিকোয়েস্ট
 $curl = curl_init();
