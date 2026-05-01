@@ -1,6 +1,6 @@
 <?php
 
-// $_GET থেকে login_id পড়া
+// $_GET থেকে login_id পড়া tar pore ok bolo
 // Raw POST data পড়া
 $inputJSON = file_get_contents('php://input');
 $input = json_decode($inputJSON, true);
